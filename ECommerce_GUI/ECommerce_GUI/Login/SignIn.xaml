@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="ECommerce_GUI.Login.SignIn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ECommerce_GUI.Login"
+             mc:Ignorable="d" 
+             d:DesignHeight="456" d:DesignWidth="368"
+             Background="White">
+    <Border BorderThickness="5"
+            BorderBrush="Transparent">
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Login"
+                           Margin="0 0 0 30"
+                           FontSize="25"
+                           TextAlignment="Center"
+                           FontWeight="Bold" />
+                <TextBlock Text="UserName"
+                           FontWeight="Bold"
+                           Margin=" 0 5 0 0" />
+                <TextBox FontSize="15"
+                         Margin="0 5 0 0 "
+                         Name="username" />
+                <TextBlock Text="Password"
+                           FontWeight="Bold"
+                           Margin=" 0 5 0 0" />
+                <PasswordBox x:Name="password"
+                             FontSize="15"
+                             Margin="0 5 0 0" />
+                <Button Margin="100 55 100 0 "
+                        Background="#FF6FA882"
+                        Content="Login"
+                        Name="signin"
+                        Click="signin_Click">
+                </Button>
+                <Button x:Name="noAccount"
+                        Margin="80 10 80 0"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Content="Dont Have An Account ?"
+                        Click="noAccount_Click"
+                        Foreground="Black" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

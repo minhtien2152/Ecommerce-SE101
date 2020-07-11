@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="ECommerce_GUI.Login.SignUp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ECommerce_GUI.Login"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="456"
+             d:DesignWidth="368"
+             Background="White">
+    <Grid>
+        <Border BorderThickness="5"
+                BorderBrush="Transparent">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Hidden">
+                <Grid>
+                    <StackPanel>
+                        <StackPanel Margin="0 0 0 15"
+                                Height="40"
+                                Orientation="Horizontal">
+                            <Button Margin="0,4,105,4"
+                                Name="backToLogin"
+                                Click="backToLogin_Click"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Padding="0" Width="30">
+                                <materialDesign:PackIcon Kind="ArrowBack"
+                                                     Foreground="Black"/>
+                            </Button>
+                            <TextBlock Text="SignUp"
+                               FontSize="25"
+                               TextAlignment="Center"
+                               FontWeight="Bold" 
+                               HorizontalAlignment="Center"/>
+
+                        </StackPanel>
+
+                        <TextBlock Text="Name"
+                               FontWeight="Bold"
+                               Margin=" 0 5 0 0" />
+                        <TextBox FontSize="15"
+                             Margin="0 5 0 0 "
+                             Name="name" />
+                        <TextBlock Text="UserName"
+                               FontWeight="Bold"
+                               Margin=" 0 5 0 0" />
+                        <TextBox FontSize="15"
+                             Margin="0 5 0 0 "
+                             Name="username" />
+                        <TextBlock Text="Password"
+                               FontWeight="Bold"
+                               Margin=" 0 5 0 0" />
+                        <PasswordBox x:Name="password"
+                                 FontSize="15"
+                                 Margin="0 5 0 0" />
+                        <TextBlock Text="Phone Number"
+                               FontWeight="Bold"
+                               Margin="0 5 0 0"/>
+                        <TextBox x:Name="phoneNumer"
+                             FontSize="15" Margin="0,5,0,0"/>
+                        <TextBlock Text="Address"
+                               FontWeight="Bold"
+                               Margin="0 5 0 0"/>
+                        <TextBox x:Name="address"
+                             FontSize="15" Margin="0,5,0,0"/>
+                        <TextBlock Text="Email"
+                               FontWeight="Bold"
+                               Margin="0 5 0 0"/>
+                        <TextBox x:Name="email"
+                             FontSize="15" Margin="0,5,0,0"/>
+                        <TextBlock Text="Account Type"
+                               FontWeight="Bold"
+                               Margin="0 5 0 0"/>
+                        <Grid Height="30" Margin="0,5,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Name="isSeller"
+                                      Content="Seller"
+                                          Checked="isSeller_Checked"
+                                          Unchecked="isSeller_Unchecked"
+                                      Grid.Column="1"/>
+                            <CheckBox Name="isBuyer"
+                                          IsChecked="True"
+                                          Checked="isBuyer_Checked"
+                                          Unchecked="isBuyer_Unchecked"
+                                      Content="Buyer"
+                                      Grid.Column="0"/>
+                        </Grid>
+                        <Button Margin="100 25 100 20 "
+                            Background="#FF6FA882"
+                            Content="SignUp"
+                            Name="signup"
+                            Click="signup_Click">
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>
