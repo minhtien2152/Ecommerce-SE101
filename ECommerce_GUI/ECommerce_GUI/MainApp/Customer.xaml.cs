@@ -33,5 +33,19 @@ namespace ECommerce_GUI.MainApp
         {
             this.Close();
         }
+
+        private void sellerPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            SellerWindow app = new SellerWindow();
+            app.Closed += App_Closed;
+            app.Show();
+        }
+
+        private void App_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

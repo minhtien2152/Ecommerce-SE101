@@ -67,6 +67,13 @@
                             Content="Make Payment">
 
                     </Button>
+                    <Button x:Name="sellerPage"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Content="Seller Channel"
+                            Click="sellerPage_Click">
+
+                    </Button>
                 </StackPanel>
 
             </StackPanel>

@@ -35,16 +35,7 @@ namespace ECommerce_GUI.Login
             {
                 MainWindow.Instance.Hide();
 
-                Window app = null;
-                if (AuthenticatedUser.user.type == 1)
-                {
-                    app = new MainApp.CustomerWindow();
-                }
-                else if (AuthenticatedUser.user.type == 2)
-                {
-                    app = new MainApp.SellerWindow();
-                }
-                
+                CustomerWindow app = new MainApp.CustomerWindow();
                 app.Closed += App_Closed;
                 app.Show();
             }
