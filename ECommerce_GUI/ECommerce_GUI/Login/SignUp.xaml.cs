@@ -21,27 +21,6 @@ namespace ECommerce_GUI.Login
     /// <summary>
     /// Interaction logic for SignUp.xaml
     /// </summary>
-    public class SignUpAPI
-    {
-        private static SignUpAPI _Instance;
-
-        public static SignUpAPI Instance
-        {
-            get
-            {
-                if (_Instance == null)
-                    _Instance = new SignUpAPI();
-                return _Instance;
-            }
-        }
-
-        public async Task<bool> signUp(Account profile)
-        {
-            Response<object> responsce = await APIHelper.Instance.Post<Response<object>>
-                (ApiRoutes.Account.signup, profile);
-            return responsce.IsSuccess;
-        }
-    }
 
     public partial class SignUp : UserControl
     {
@@ -60,7 +39,10 @@ namespace ECommerce_GUI.Login
             newUser.Address = address.Text;
             newUser.email = email.Text;
 
-            if (await SignUpAPI.Instance.signUp(newUser))
+            Response<object> responsce = await APIHelper.Instance.Post<Response<object>>
+                (ApiRoutes.Account.signup, newUser);
+
+            if (responsce.IsSuccess)
             {
                 MainWindow.Instance.showLogin();
             }

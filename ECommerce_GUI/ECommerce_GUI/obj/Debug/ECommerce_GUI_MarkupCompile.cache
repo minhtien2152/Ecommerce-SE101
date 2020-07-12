@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml
-61822901854
+10-1478642368
 
-12-1098924561
-221021400527
-Login\SignIn.xaml;Login\SignUp.xaml;MainApp\Customer.xaml;MainApp\Seller.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
+16-489927885
+27-1726036174
+Login\SignIn.xaml;Login\SignUp.xaml;MainApp\CustomerWindow.xaml;MainApp\Product\DetailProduct.xaml;MainApp\Product\DisplayProdudct.xaml;MainApp\Product\ProductMain.xaml;MainApp\Product\ReviewProduct.xaml;MainApp\SellerWindow.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
 
 False
 

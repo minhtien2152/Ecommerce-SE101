@@ -97,6 +97,7 @@ namespace ServerFTM.BUS
             if (productDisplay != null)
             {
                 result.ProductName = productDisplay.Rows[0]["ProductName"].ToString();
+                result.ImgURL = productDisplay.Rows[0]["ImgURL"].ToString();
                 result.Price = double.Parse(productDisplay.Rows[0]["Price"].ToString());
                 result.totalSale = int.Parse(productDisplay.Rows[0]["totalSale"].ToString());
             }
@@ -113,26 +114,36 @@ namespace ServerFTM.BUS
             {
                 result.ProductName = productDetail.Rows[0]["ProductName"].ToString();
                 result.Price = double.Parse(productDetail.Rows[0]["Price"].ToString());
-                result.Description = productDetail.Rows[0]["totalSale"].ToString();
+                result.Description = productDetail.Rows[0]["Description"].ToString();
+                result.shopId = productDetail.Rows[0]["shopId"].ToString();
+                result.totalSale = int.Parse(productDetail.Rows[0]["totalSale"].ToString());
                 result.shopName = productDetail.Rows[0]["shopName"].ToString();
                 result.shopImageUrl = productDetail.Rows[0]["shopImageUrl"].ToString();
             }
             return result;
         }
 
-        public ProductReview getProductReview(string productId)
+        public List<ProductReview> getProductReview(string productId)
         {
-            ProductReview result = new ProductReview();
+            List<ProductReview> result = new List<ProductReview>();
 
-            DataTable productReview = DAL_Controls.Controls.getProductDetail(productId);
+            DataTable productReview = DAL_Controls.Controls.getProductReview(productId);
 
             if (productReview != null)
             {
-                result.UserId = productReview.Rows[0]["UserId"].ToString();
-                result.userName = productReview.Rows[0]["userName"].ToString();
-                result.Rating = int.Parse(productReview.Rows[0]["Rating"].ToString());
-                result.Content = productReview.Rows[0]["Content"].ToString();
-                result.DatePost = productReview.Rows[0]["DatePost"].ToString();
+                foreach(DataRow row in productReview.Rows)
+                {
+                    ProductReview item = new ProductReview();
+
+                    item.UserId = productReview.Rows[0]["UserId"].ToString();
+                    item.userName = productReview.Rows[0]["userName"].ToString();
+                    item.Rating = int.Parse(productReview.Rows[0]["Rating"].ToString());
+                    item.Content = productReview.Rows[0]["Content"].ToString();
+                    item.DatePost = productReview.Rows[0]["DatePost"].ToString();
+
+                    result.Add(item);
+                }
+                
             }
             return result;
         }
