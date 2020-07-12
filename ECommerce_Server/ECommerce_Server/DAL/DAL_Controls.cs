@@ -27,9 +27,8 @@ namespace ServerFTM.DAL.Controls
 
         public bool signUp(Account profile)
         {
-            
-                DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
-                    new object[] {
+            DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
+                new object[] {
                         profile.UserId,
                         profile.userName,
                         profile.password,
@@ -40,26 +39,69 @@ namespace ServerFTM.DAL.Controls
                         profile.Address,
                         profile.email,
                         profile.lastEdit
-                    });
-            
+                });
+
             return true;
         }
 
         public DataTable signin(Account profile)
         {
-            DataTable result;
-            try
-            {
-                result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcSignIn,
-                    new object[] {
-                        profile.userName,
-                        profile.password
-                    });
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcSignIn,
+                new object[] {
+                    profile.userName,
+                    profile.password
+                });
+
+            return result;
+        }
+
+        public DataTable getTopSellingProductId()
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetTopSellingProductId);
+
+            return result;
+        }
+
+        public DataTable getAllProductId()
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetAllProductId);
+
+            return result;
+        }
+
+        public DataTable getProductDisplay(string productId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductDisplay,
+                new object[] {
+                    productId
+                });
+            return result;
+        }
+
+        public DataTable getProductDetail(string productId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductDetail,
+                new object[] {
+                    productId
+                });
+            return result;
+        }
+
+        public DataTable getProductReview(string productId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductReview,
+                new object[] {
+                    productId
+                });
+            return result;
+        }
+
+        public DataTable getProductImage(string productId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductImage,
+                new object[] {
+                    productId
+                });
             return result;
         }
     }

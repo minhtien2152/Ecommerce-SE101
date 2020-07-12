@@ -60,9 +60,6 @@ namespace ECommerce_GUI.Login
             newUser.Address = address.Text;
             newUser.email = email.Text;
 
-            if (isBuyer.IsChecked == true) newUser.type = 1;
-            else if (isSeller.IsChecked == true) newUser.type = 2;
-
             if (await SignUpAPI.Instance.signUp(newUser))
             {
                 MainWindow.Instance.showLogin();
@@ -76,40 +73,6 @@ namespace ECommerce_GUI.Login
         private void backToLogin_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Instance.showLogin();
-        }
-
-        private void isSeller_Checked(object sender, RoutedEventArgs e)
-        {
-            if (isBuyer.IsChecked == true)
-            {
-                isBuyer.IsChecked = false;
-            }
-        }
-
-        private void isSeller_Unchecked(object sender, RoutedEventArgs e)
-        {
-            if (isBuyer.IsChecked == false)
-            {
-                isSeller.IsChecked = true;
-                e.Handled = true; 
-            }
-        }
-
-        private void isBuyer_Checked(object sender, RoutedEventArgs e)
-        {
-            if (isSeller.IsChecked == true)
-            {
-                isSeller.IsChecked = false;
-            }
-        }
-
-        private void isBuyer_Unchecked(object sender, RoutedEventArgs e)
-        {
-            if (isSeller.IsChecked == false)
-            {
-                isBuyer.IsChecked = true;
-                e.Handled = true;
-            }
         }
     }
 }

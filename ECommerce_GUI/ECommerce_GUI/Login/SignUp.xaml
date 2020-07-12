@@ -69,26 +69,6 @@
                                Margin="0 5 0 0"/>
                         <TextBox x:Name="email"
                              FontSize="15" Margin="0,5,0,0"/>
-                        <TextBlock Text="Account Type"
-                               FontWeight="Bold"
-                               Margin="0 5 0 0"/>
-                        <Grid Height="30" Margin="0,5,0,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <CheckBox Name="isSeller"
-                                      Content="Seller"
-                                          Checked="isSeller_Checked"
-                                          Unchecked="isSeller_Unchecked"
-                                      Grid.Column="1"/>
-                            <CheckBox Name="isBuyer"
-                                          IsChecked="True"
-                                          Checked="isBuyer_Checked"
-                                          Unchecked="isBuyer_Unchecked"
-                                      Content="Buyer"
-                                      Grid.Column="0"/>
-                        </Grid>
                         <Button Margin="100 25 100 20 "
                             Background="#FF6FA882"
                             Content="SignUp"
