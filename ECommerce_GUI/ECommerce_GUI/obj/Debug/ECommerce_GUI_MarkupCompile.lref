@@ -2,6 +2,8 @@
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignIn.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignUp.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\CartMain.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\DisplayCart.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\CustomerWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\DetailProduct.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\DisplayProdudct.xaml;;

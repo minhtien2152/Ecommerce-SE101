@@ -27,6 +27,8 @@ namespace ServerFTM.DAL.Query
         public class Cart
         {
             public const string ProcCheckCartQuantity = "EXECUTE ProcCheckCartQuantity @userid , @productId , @quantity";
+            public const string ProcInsertCart = "EXECUTE ProcInsertCart @userid , @productId , @quantity";
+            public const string ProcDeleteCart = "EXECUTE ProcDeleteCart @userid , @productId , @quantity";
         }
     }
 }

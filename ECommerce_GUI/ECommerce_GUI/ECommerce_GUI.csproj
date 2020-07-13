@@ -99,6 +99,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MainApp\Cart\CartMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainApp\Cart\DisplayCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainApp\CustomerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +147,12 @@
     </Compile>
     <Compile Include="Login\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp\Cart\CartMain.xaml.cs">
+      <DependentUpon>CartMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp\Cart\DisplayCart.xaml.cs">
+      <DependentUpon>DisplayCart.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainApp\CustomerWindow.xaml.cs">
       <DependentUpon>CustomerWindow.xaml</DependentUpon>

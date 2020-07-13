@@ -95,3 +95,7 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Custome
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DetailProduct.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ReviewProduct.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\SellerWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.baml

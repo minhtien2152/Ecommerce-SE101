@@ -127,5 +127,39 @@ namespace ServerFTM.DAL.Controls
                 });
             return result;
         }
+
+        public bool insertCart(Cart value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Cart.ProcInsertCart,
+                    new object[] {
+                        value.UserId,
+                        value.ProductId,
+                        value.Quantity
+                    }) > 0;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool deleteCart(Cart value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Cart.ProcDeleteCart,
+                    new object[] {
+                        value.UserId,
+                        value.ProductId,
+                        value.Quantity
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

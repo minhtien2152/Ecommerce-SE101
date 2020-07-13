@@ -171,6 +171,16 @@ namespace ServerFTM.BUS
 
             return int.Parse(check.Rows[0]["check"].ToString());
         }
+        
+        public bool insertCart(Cart value)
+        {
+            return DAL_Controls.Controls.insertCart(value);
+        }
+
+        public bool deleteCart(Cart value)
+        {
+            return DAL_Controls.Controls.deleteCart(value);
+        }
 
         string GenerateID()
         {
