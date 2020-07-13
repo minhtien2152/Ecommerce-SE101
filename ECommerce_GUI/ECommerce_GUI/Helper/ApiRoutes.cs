@@ -31,6 +31,7 @@ namespace ECommerce_GUI.Helper
             public const string CheckCartQuantity = Base + "/Cart/CheckCartQuantity/UserId={userId}/ProductId={productId}/Quantity={quantity}";
             public const string InsertCart = Base + "/Cart/InsertCart";
             public const string DeleteCart = Base + "/Cart/DeleteCart";
+            public const string GetCart = Base + "/Cart/GetCart/UserId={userId}";
         }
 
         public class Utility

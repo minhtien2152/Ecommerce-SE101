@@ -161,5 +161,14 @@ namespace ServerFTM.DAL.Controls
                 return false;
             }
         }
+
+        public DataTable getCart(string userId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Cart.ProcGetCart,
+                new object[] {
+                    userId
+                });
+            return result;
+        }
     }
 }

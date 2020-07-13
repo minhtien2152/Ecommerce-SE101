@@ -182,6 +182,27 @@ namespace ServerFTM.BUS
             return DAL_Controls.Controls.deleteCart(value);
         }
 
+        public List<Cart> getCart(string userId)
+        {
+            List<Cart> result = new List<Cart>();
+
+            DataTable cartList = DAL_Controls.Controls.getCart(userId);
+
+            if (cartList != null)
+            {
+                foreach(DataRow row in cartList.Rows)
+                {
+                    Cart item = new Cart();
+                    item.UserId = row["UserId"].ToString();
+                    item.ProductId = row["ProductId"].ToString();
+                    item.Quantity = int.Parse(row["Quantity"].ToString());
+
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
+
         string GenerateID()
         {
             StringBuilder builder = new StringBuilder();
