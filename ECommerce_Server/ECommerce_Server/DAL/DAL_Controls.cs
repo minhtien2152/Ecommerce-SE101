@@ -27,32 +27,44 @@ namespace ServerFTM.DAL.Controls
 
         public bool signUp(Account profile)
         {
-            DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
-                new object[] {
-                        profile.UserId,
-                        profile.userName,
-                        profile.password,
-                        profile.type,
-                        profile.SignUpDate,
-                        profile.Name,
-                        profile.phoneNum,
-                        profile.Address,
-                        profile.email,
-                        profile.lastEdit
-                });
-
+            try
+            {
+                DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
+                    new object[] {
+                            profile.UserId,
+                            profile.userName,
+                            profile.password,
+                            profile.type,
+                            profile.SignUpDate,
+                            profile.Name,
+                            profile.phoneNum,
+                            profile.Address,
+                            profile.email,
+                            profile.lastEdit
+                    });
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
             return true;
         }
 
         public DataTable signin(Account profile)
         {
-            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcSignIn,
-                new object[] {
-                    profile.userName,
-                    profile.password
-                });
-
-            return result;
+            try
+            {
+                DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcSignIn,
+                    new object[] {
+                        profile.userName,
+                        profile.password
+                    });
+                return result;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
         public DataTable getTopSellingProductId()
@@ -101,6 +113,17 @@ namespace ServerFTM.DAL.Controls
             DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductImage,
                 new object[] {
                     productId
+                });
+            return result;
+        }
+
+        public DataTable checkCart(Cart value)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Cart.ProcCheckCartQuantity,
+                new object[] {
+                    value.UserId,
+                    value.ProductId,
+                    value.Quantity
                 });
             return result;
         }

@@ -64,7 +64,7 @@ namespace ECommerce_Server.Controllers
             };
 
             var token = new JwtSecurityToken(null, null, claims,
-                                expires: DateTime.Now.AddMinutes(10080),
+                                expires: DateTime.Now.AddMinutes(300),
                                 signingCredentials: credentials);
             var encodeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodeToken;

@@ -23,5 +23,10 @@ namespace ServerFTM.DAL.Query
             public const string ProcGetProductReview = "EXECUTE ProcGetProductReview @productID";
             public const string ProcGetProductImage = "EXECUTE ProcGetProductImage @productID"; 
         }
+
+        public class Cart
+        {
+            public const string ProcCheckCartQuantity = "EXECUTE ProcCheckCartQuantity @userid , @productId , @quantity";
+        }
     }
 }

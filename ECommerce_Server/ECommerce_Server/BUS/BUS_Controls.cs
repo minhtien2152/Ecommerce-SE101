@@ -39,11 +39,12 @@ namespace ServerFTM.BUS
 
         public Account signin(Account profile)
         {
-            Account result = new Account();
+            Account result = null;
             DataTable account = DAL_Controls.Controls.signin(profile);
                 
-            if (account != null)
+            if (account != null && account.Rows.Count > 0)
             {
+                result = new Account();
                 result.UserId = account.Rows[0]["UserId"].ToString();
                 result.userName = account.Rows[0]["userName"].ToString();
                 result.type = Convert.ToInt32(account.Rows[0]["type"].ToString());
@@ -162,6 +163,13 @@ namespace ServerFTM.BUS
                 }
             }
             return result;
+        }
+
+        public int checkCart(Cart value)
+        {
+            DataTable check = DAL_Controls.Controls.checkCart(value);
+
+            return int.Parse(check.Rows[0]["check"].ToString());
         }
 
         string GenerateID()
