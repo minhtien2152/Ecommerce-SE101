@@ -182,6 +182,11 @@ namespace ServerFTM.BUS
             return DAL_Controls.Controls.deleteCart(value);
         }
 
+        public bool clearCart(Cart value)
+        {
+            return DAL_Controls.Controls.clearCart(value); 
+        }
+
         public List<Cart> getCart(string userId)
         {
             List<Cart> result = new List<Cart>();

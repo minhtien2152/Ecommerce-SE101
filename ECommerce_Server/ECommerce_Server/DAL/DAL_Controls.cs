@@ -162,6 +162,23 @@ namespace ServerFTM.DAL.Controls
             }
         }
 
+        public bool clearCart(Cart value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Cart.ProcClearCart,
+                    new object[] {
+                        value.UserId,
+                        value.ProductId,
+                        value.Quantity
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
         public DataTable getCart(string userId)
         {
             DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Cart.ProcGetCart,
