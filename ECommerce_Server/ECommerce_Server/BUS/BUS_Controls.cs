@@ -136,11 +136,11 @@ namespace ServerFTM.BUS
                 {
                     ProductReview item = new ProductReview();
 
-                    item.UserId = productReview.Rows[0]["UserId"].ToString();
-                    item.userName = productReview.Rows[0]["userName"].ToString();
-                    item.Rating = int.Parse(productReview.Rows[0]["Rating"].ToString());
-                    item.Content = productReview.Rows[0]["Content"].ToString();
-                    item.DatePost = productReview.Rows[0]["DatePost"].ToString();
+                    item.UserId = row["UserId"].ToString();
+                    item.userName = row["userName"].ToString();
+                    item.Rating = int.Parse(row["Rating"].ToString());
+                    item.Content = row["Content"].ToString();
+                    item.DatePost = row["DatePost"].ToString();
 
                     result.Add(item);
                 }

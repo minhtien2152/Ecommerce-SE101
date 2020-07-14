@@ -73,7 +73,7 @@ namespace ECommerce_GUI.MainApp.Order
                     foreach (var item in logList.Result)
                     {
                         this.shippingLog.Text += $"[{string.Format("{0:dd/MM/yyyy HH:mm:ss}", item.date)}] " +
-                            $"{item.content}" + "\n=================================\n"; 
+                            $"{item.content}\n";
                     }
                 });
             });
