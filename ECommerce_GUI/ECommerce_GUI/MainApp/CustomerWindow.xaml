@@ -1,0 +1,120 @@
+﻿<Window x:Class="ECommerce_GUI.MainApp.CustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:control="clr-namespace:ECommerce_GUI.MainApp.Product"
+        xmlns:local="clr-namespace:ECommerce_GUI.MainApp"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        BorderThickness="1"
+        BorderBrush="Black"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="WhiteSmoke"
+        Title="MainApp" Height="768" Width="1300"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+              Background="#FFD44D27"
+              MouseLeftButtonDown="tileBar_MouseLeftButtonDown">
+            <StackPanel Height="50"
+                        Orientation="Horizontal"
+                        FlowDirection="RightToLeft">
+                <Button x:Name="closeBtn"
+                        Margin="5,9,5,8.6"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Padding="0" Width="29"
+                        Click="closeBtn_Click">
+                    <materialDesign:PackIcon Kind="Close"
+                                            Foreground="White" 
+                                             Width="21" Height="22"/>
+                </Button>
+                <Button x:Name="username"
+                        Content="customer username"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Foreground="White"
+                        FontSize="15"
+                        FontWeight="SemiBold"
+                        MaxWidth="256"/>
+                <Image Source="{StaticResource user}"
+                       Stretch="Fill"
+                       Margin="5"/>
+                <StackPanel Width="1007" Margin="0,0,0,-0.4"
+                            Orientation="Horizontal"
+                            FlowDirection="LeftToRight">
+                    <Button x:Name="homePage"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Content="Home"
+                            Click="homePage_Click">
+                    </Button>
+                    <Button x:Name="rechargeAccount"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Content="Recharge Account"
+                            Click="rechargeAccount_Click">
+
+                    </Button>
+                    <Button x:Name="sellerPage"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Content="Seller Channel"
+                            Click="sellerPage_Click">
+                    </Button>
+                    <ProgressBar Name="watting" Style="{StaticResource MaterialDesignCircularProgressBar}"
+                                 Foreground="White"
+                                 Visibility="Visible"
+                                 Width="30" Height="Auto" Value="0" IsIndeterminate="True" Margin="0,10,0,8.6"/>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel Height="50"
+                        Orientation="Horizontal">
+                <Image Source="{StaticResource appIcon}"
+                       Stretch="Fill" Margin="5"/>
+                <TextBlock Text="E-Commerce"
+                           Foreground="White"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="25"
+                           FontWeight="SemiBold"/>
+                <ComboBox Name="searchBar" Margin="10,10,0,7.6" Width="946" Height="32"
+                          Background="White"
+                          IsEditable="True"
+                          Foreground="Black"/>
+                <Button Name="search"
+                        Margin="10,9,0,8.6" Width="34"
+                        Background="#FF6BD05B"
+                        Padding="0">
+                    <materialDesign:PackIcon Kind="Search"
+                                             Foreground="White"/>
+                </Button>
+                <Button Name="cart"
+                        Margin="10,5,0,4.6" Width="34"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Padding="0" Height="Auto"
+                        Click="cart_Click">
+                    <materialDesign:PackIcon Kind="Cart"
+                                             Foreground="White" Width="29" Height="30"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Row="1" Name="toastNotificationArea">
+            <Grid Grid.Row="1"
+              Margin="70 0 70 0"
+              Background="WhiteSmoke"
+              Name="controlGrid"
+              x:FieldModifier="public">
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
