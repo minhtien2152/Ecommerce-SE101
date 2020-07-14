@@ -3,6 +3,7 @@ using FlightTicketManagement.Helper;
 using Library.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,8 +73,9 @@ namespace ECommerce_GUI.MainApp.Order
                 {
                     foreach (var item in logList.Result)
                     {
-                        this.shippingLog.Text += $"[{string.Format("{0:dd/MM/yyyy HH:mm:ss}", item.date)}] " +
-                            $"{item.content}\n";
+                        DateTime dt = DateTime.Parse(item.date);
+                        this.shippingLog.Text += $"[{dt.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture)}] " +
+                            $"{item.content}\n\n";
                     }
                 });
             });

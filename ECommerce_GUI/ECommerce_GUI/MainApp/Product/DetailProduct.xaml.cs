@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
 using ToastNotifications.Messages;
 
 namespace ECommerce_GUI.MainApp.Product
@@ -110,8 +111,10 @@ namespace ECommerce_GUI.MainApp.Product
                         sumRating += item.Rating;
                         countRating++;
 
+                        DateTime dt = DateTime.Parse(item.DatePost);
+
                         string reviewDisplay = $"{item.userName} " +
-                            $"[{string.Format("{0:dd/MM/yyyy HH:mm:ss}", item.DatePost)}] -> {item.Content}\n";
+                            $"[{dt.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture)}] -> {item.Content}\n\n";
                         reviewText.Text += reviewDisplay;
                     }
                 });

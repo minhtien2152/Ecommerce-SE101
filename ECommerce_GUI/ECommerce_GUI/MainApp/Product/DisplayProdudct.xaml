@@ -21,10 +21,9 @@
                         Height="auto"
                         FontWeight="SemiBold"
                         TextDecorations="Underline"
-                        TextWrapping="Wrap"
-                        Text="Súng Lục Glock97"/>
-            <TextBlock Name="productPrice" Text="123.456 VNĐ" Foreground="Red" FontSize="18"/>
-            <TextBlock Name="productTotalSale" Text="Sold 123" FontSize="11"/>
+                        TextWrapping="Wrap"/>
+            <TextBlock Name="productPrice" Foreground="Red" FontSize="18"/>
+            <TextBlock Name="productTotalSale" FontSize="11"/>
             
         </StackPanel>
         <Canvas Margin="10 298 10 0" Background="Black"/>

@@ -1,12 +1,320 @@
-﻿<Window x:Class="ECommerce_GUI.MainApp.SellerWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ECommerce_GUI.MainApp"
+        xmlns:Seller="clr-namespace:ECommerce_GUI.MainApp.Seller"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        x:Class="ECommerce_GUI.MainApp.SellerWindow"
         mc:Ignorable="d"
-        Title="Seller" Height="450" Width="800">
+        Title="Seller" Height="768" Width="1300"
+        WindowStyle="None"
+        >
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="stylebtnMenu">
+            <Setter Property="Foreground" Value="DarkSlateGray"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+        </Style>
+
+        <Style x:Key="ScrollBarTrackThumb"
+        TargetType="{x:Type Thumb}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Grid x:Name="Grid">
+                            <Rectangle HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Width="Auto"
+                                Height="Auto"
+                                Fill="Transparent" />
+                            <Border x:Name="CornerScrollBarRectangle"
+                            CornerRadius="5"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Width="Auto"
+                            Height="Auto"
+                            Margin="0,1,0,1"
+                            Background="{TemplateBinding Background}" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Tag"
+                                Value="Horizontal">
+                                <Setter TargetName="CornerScrollBarRectangle"
+                                Property="Width"
+                                Value="Auto" />
+                                <Setter TargetName="CornerScrollBarRectangle"
+                                Property="Height"
+                                Value="6" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type ScrollBar}">
+            <Setter Property="Stylus.IsFlicksEnabled"
+            Value="false" />
+            <Setter Property="Foreground"
+            Value="#ADABAB" />
+            <Setter Property="Background"
+            Value="Transparent" />
+            <Setter Property="Width"
+            Value="7" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid x:Name="GridRoot"
+                        Width="7"
+                        Background="{TemplateBinding Background}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.00001*" />
+                            </Grid.RowDefinitions>
+                            <Track x:Name="PART_Track"
+                            Grid.Row="0"
+                            IsDirectionReversed="true"
+                            Focusable="false">
+                                <Track.Thumb>
+                                    <Thumb x:Name="Thumb"
+                                    Background="{TemplateBinding Foreground}"
+                                    Style="{DynamicResource ScrollBarTrackThumb}" />
+                                </Track.Thumb>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton x:Name="PageUp"
+                                            Command="ScrollBar.PageDownCommand"
+                                            Opacity="0"
+                                            Focusable="false" />
+                                </Track.IncreaseRepeatButton>
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton x:Name="PageDown"
+                                            Command="ScrollBar.PageUpCommand"
+                                            Opacity="0"
+                                            Focusable="false" />
+                                </Track.DecreaseRepeatButton>
+                            </Track>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger SourceName="Thumb"
+                                Property="IsMouseOver"
+                                Value="true">
+                                <Setter Value="{DynamicResource ButtonSelectBrush}"
+                                TargetName="Thumb"
+                                Property="Background" />
+                            </Trigger>
+                            <Trigger SourceName="Thumb"
+                                Property="IsDragging"
+                                Value="true">
+                                <Setter Value="{DynamicResource DarkBrush}"
+                                TargetName="Thumb"
+                                Property="Background" />
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled"
+                                Value="false">
+                                <Setter TargetName="Thumb"
+                                Property="Visibility"
+                                Value="Collapsed" />
+                            </Trigger>
+                            <Trigger Property="Orientation"
+                                Value="Horizontal">
+                                <Setter TargetName="GridRoot"
+                                Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90" />
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="PART_Track"
+                                Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90" />
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Width"
+                                Value="Auto" />
+                                <Setter Property="Height"
+                                Value="8" />
+                                <Setter TargetName="Thumb"
+                                Property="Tag"
+                                Value="Horizontal" />
+                                <Setter TargetName="PageDown"
+                                Property="Command"
+                                Value="ScrollBar.PageLeftCommand" />
+                                <Setter TargetName="PageUp"
+                                Property="Command"
+                                Value="ScrollBar.PageRightCommand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Height="30" Background="#D44D27" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <TextBlock Text="Trang bán hàng" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="19" Margin="15 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="btnmini" Background="Transparent" BorderThickness="0" Click="btnmini_Click">
+                    <materialDesign:PackIcon Kind="WindowMinimize" Foreground="Black" />
+                </Button>
+                <Button x:Name="btnMaxi" Background="Transparent" BorderThickness="0" Foreground="Black"  Click="btnMaxi_Click">
+                    <materialDesign:PackIcon Kind="WindowMaximize" />
+                </Button>
+                <Button x:Name="btnExit" Background="DarkRed" BorderThickness="0" Click="btnExit_Click">
+                    <materialDesign:PackIcon Kind="Close" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="216"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0"
+                  Background="Azure">
+
+                <ScrollViewer 
+                    HorizontalScrollBarVisibility="Hidden"
+                    VerticalScrollBarVisibility="Auto"
+                    Background="Transparent">
+                    <DockPanel Background="#F0FFFF">
+                        <StackPanel VerticalAlignment="Stretch" Background="#F0FFFF">
+                            <Expander
+                                HorizontalAlignment="Stretch"
+                                Header="Quản lý sản phẩm"
+                                Foreground="DarkSlateGray"
+                                IsExpanded="True"
+                                FontWeight="Bold"
+                                Background="Transparent">
+                                <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <Button x:Name="btnAllPro" Style="{StaticResource stylebtnMenu}" Content="Tất cả sản phẩm" Click="btnAllPro_Click"/>
+                                    <Button x:Name="btnAddPro" Style="{StaticResource stylebtnMenu}" Content="Thêm sản phẩm" Click="btnAddPro_Click"/>
+                                </StackPanel>
+                            </Expander>
+                            <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="Quản lý đơn hàng" 
+                        Foreground="DarkSlateGray"
+                        IsExpanded="True"
+                        FontWeight="Bold"
+                        Background="Transparent">
+                                <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Tất cả đơn hàng"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Xử lý hàng loạt"/>
+                                </StackPanel>
+                            </Expander>
+                            <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="Doanh thu shop" 
+                        Foreground="DarkSlateGray"
+                        IsExpanded="True"
+                        FontWeight="Bold"
+                        Background="Transparent">
+                                <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Doanh thu theo tháng"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Doanh thu theo năm"/>
+                                </StackPanel>
+                            </Expander>
+                            <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="Thiết lập shop" 
+                        Foreground="DarkSlateGray"
+                        IsExpanded="True"
+                        FontWeight="Bold"
+                        Background="Transparent">
+                                <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thông tin shop"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thông tin tài khoản"/>
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                    </DockPanel>
+                </ScrollViewer>
+
+
+
+                <!--<TreeView>
+                    <TreeViewItem
+                        Header="Quản lý sản phẩm">
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <TextBlock Text="Tất cả sản phẩm"/>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem
+                            Header="Thêm sản phẩm" HorizontalContentAlignment="Left" HorizontalAlignment="Left"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem
+                    Header="OS"
+                    IsExpanded="True">
+                        <TreeViewItem
+                            Header="Amiga" />
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <StackPanel
+                          Orientation="Horizontal">
+                                    <TextBlock>
+                          Android
+                                    </TextBlock>
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem
+                      Header="iOS" />
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TextBlock>
+                                        Linux
+                                    </TextBlock>
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TextBlock>
+                                        Windows
+                                    </TextBlock>
+                                </StackPanel>
+                            </TreeViewItem.Header>
+                        </TreeViewItem>
+                    </TreeViewItem>
+
+                    <TreeViewItem
+                        Header="Empty" />
+                </TreeView>-->
+
+            </Grid>
+
+            <ContentControl x:Name="ActiveItem" Grid.Column="1" />
+
+        </Grid>
+
+
     </Grid>
 </Window>

@@ -104,9 +104,6 @@ D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\bin\Debug\netcoreap
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.csprojAssemblyReference.cache
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.AssemblyInfoInputs.cache
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.AssemblyInfo.cs
-D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.csproj.CoreCompileInputs.cache
-D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.MvcApplicationPartsAssemblyInfo.cs
-D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.MvcApplicationPartsAssemblyInfo.cache
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.RazorAssemblyInfo.cache
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.RazorAssemblyInfo.cs
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.TagHelpers.input.cache
@@ -128,3 +125,6 @@ D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreap
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.dll
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.pdb
 D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.genruntimeconfig.cache
+D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.csproj.CoreCompileInputs.cache
+D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio\ECommerce\ECommerce_Server\ECommerce_Server\obj\Debug\netcoreapp3.1\ECommerce_Server.MvcApplicationPartsAssemblyInfo.cache

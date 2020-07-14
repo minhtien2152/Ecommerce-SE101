@@ -20,10 +20,9 @@
                         Height="auto"
                         FontWeight="SemiBold"
                         TextDecorations="Underline"
-                           FontSize="18"
-                        Text="Súng Lục Glock97"/>
-                <TextBlock Name="productPrice" Text="123.456 VNĐ" Foreground="Red" FontSize="25"/>
-                <TextBlock Name="productQuantity" Text="Quantity: 12" FontSize="15"/>
+                           FontSize="18"/>
+                <TextBlock Name="productPrice" Foreground="Red" FontSize="25"/>
+                <TextBlock Name="productQuantity" FontSize="15"/>
                 <StackPanel Orientation="Horizontal" Height="50" Margin="0 20 0 0">
                     <Button Name="buyMore" Content="Buy More" Margin="0 0 0 0" Background="#FF3AB77A" Click="buyMore_Click"/>
                     <Button Name="deleteCart" Content="Delete" Margin="10 0 0 0" Background="#FFB7433A" Click="deleteCart_Click"/>
