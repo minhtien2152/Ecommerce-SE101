@@ -41,7 +41,7 @@ namespace ServerFTM.BUS
         {
             Account result = null;
             DataTable account = DAL_Controls.Controls.signin(profile);
-                
+
             if (account != null && account.Rows.Count > 0)
             {
                 result = new Account();
@@ -61,11 +61,11 @@ namespace ServerFTM.BUS
         {
             List<string> result = new List<string>();
 
-            DataTable listId = DAL_Controls.Controls.getTopSellingProductId(); 
+            DataTable listId = DAL_Controls.Controls.getTopSellingProductId();
 
             if (listId != null)
             {
-                foreach(DataRow row in listId.Rows)
+                foreach (DataRow row in listId.Rows)
                 {
                     result.Add(row["ProductId"].ToString());
                 }
@@ -132,7 +132,7 @@ namespace ServerFTM.BUS
 
             if (productReview != null)
             {
-                foreach(DataRow row in productReview.Rows)
+                foreach (DataRow row in productReview.Rows)
                 {
                     ProductReview item = new ProductReview();
 
@@ -144,7 +144,7 @@ namespace ServerFTM.BUS
 
                     result.Add(item);
                 }
-                
+
             }
             return result;
         }
@@ -153,13 +153,13 @@ namespace ServerFTM.BUS
         {
             List<string> result = new List<string>();
 
-            DataTable listImg = DAL_Controls.Controls.getProductImage(productId); 
+            DataTable listImg = DAL_Controls.Controls.getProductImage(productId);
 
             if (listImg != null)
             {
-                foreach(DataRow row in listImg.Rows)
+                foreach (DataRow row in listImg.Rows)
                 {
-                    result.Add(row["ImgURL"].ToString()); 
+                    result.Add(row["ImgURL"].ToString());
                 }
             }
             return result;
@@ -171,7 +171,7 @@ namespace ServerFTM.BUS
 
             return int.Parse(check.Rows[0]["check"].ToString());
         }
-        
+
         public bool insertCart(Cart value)
         {
             return DAL_Controls.Controls.insertCart(value);
@@ -190,7 +190,7 @@ namespace ServerFTM.BUS
 
             if (cartList != null)
             {
-                foreach(DataRow row in cartList.Rows)
+                foreach (DataRow row in cartList.Rows)
                 {
                     Cart item = new Cart();
                     item.UserId = row["UserId"].ToString();
@@ -201,6 +201,111 @@ namespace ServerFTM.BUS
                 }
             }
             return result;
+        }
+
+        public string createOrder(Order value)
+        {
+            value.OrderId = GenerateID();
+            if (DAL_Controls.Controls.createOrder(value))
+            {
+                return value.OrderId;
+            }
+            return ""; 
+        }
+
+        public bool createOrderDetail(OrderDetail value)
+        {
+            return DAL_Controls.Controls.createOrderDetail(value);
+        }
+
+        public bool rechargeAccount(AccountMoney value)
+        {
+            return DAL_Controls.Controls.rechargeAccount(value);
+        }
+
+        public bool makePayment(OrderDetail value)
+        {
+            string paymentId = GenerateID();
+            string dateCheckout = string.Format("{0:yyyy/MM/dd HH:mm:ss}", DateTime.Now.ToString());
+
+            return DAL_Controls.Controls.MakePayment(value, paymentId, dateCheckout);
+        }
+
+        public List<Order> getOrder(string userId)
+        {
+            List<Order> result = new List<Order>();
+
+            DataTable orderList = DAL_Controls.Controls.getOrder(userId);
+
+            if (orderList != null)
+            {
+                foreach (DataRow row in orderList.Rows)
+                {
+                    Order item = new Order();
+                    item.OrderId = row["OrderId"].ToString();
+                    item.Address = row["Address"].ToString();
+                    item.Total = double.Parse(row["Total"].ToString());
+                    item.Date = row["Date"].ToString();
+                    item.isPaid = int.Parse(row["isPaid"].ToString());
+                    item.isArrived = int.Parse(row["isArrived"].ToString());
+
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
+
+        public List<OrderDetail> getOrderDetail(string orderId)
+        {
+            List<OrderDetail> result = new List<OrderDetail>();
+
+            DataTable orderDetailList = DAL_Controls.Controls.getOrderDetail(orderId);
+
+            if (orderDetailList != null)
+            {
+                foreach (DataRow row in orderDetailList.Rows)
+                {
+                    OrderDetail item = new OrderDetail();
+                    item.OrderId = orderId;
+                    item.ProductId = row["ProductId"].ToString();
+                    item.Quantity = int.Parse(row["Quantity"].ToString());
+
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
+
+        public List<ShippingLog> GetShippingLogs(string orderId)
+        {
+            List<ShippingLog> result = new List<ShippingLog>();
+
+            DataTable shippingLogs = DAL_Controls.Controls.getShippingLog(orderId);
+
+            if (shippingLogs != null)
+            {
+                foreach (DataRow row in shippingLogs.Rows)
+                {
+                    ShippingLog item = new ShippingLog();
+                    item.OrderId = orderId;
+                    item.date = row["date"].ToString();
+                    item.content = row["content"].ToString();
+
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
+
+        public double getCurrentBalance(string userid)
+        {
+            DataTable balance = DAL_Controls.Controls.getCurrentBalance(userid);
+
+            if (balance != null)
+            {
+                return double.Parse(balance.Rows[0]["balance"].ToString());
+            }
+            return double.NaN;
         }
 
         string GenerateID()

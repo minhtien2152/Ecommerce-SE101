@@ -43,7 +43,7 @@ namespace ServerFTM.DAL.Controls
                             profile.lastEdit
                     });
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return false;
             }
@@ -139,7 +139,7 @@ namespace ServerFTM.DAL.Controls
                         value.Quantity
                     }) > 0;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return false;
             }
@@ -167,6 +167,115 @@ namespace ServerFTM.DAL.Controls
             DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Cart.ProcGetCart,
                 new object[] {
                     userId
+                });
+            return result;
+        }
+
+        public bool createOrder(Order value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Order.ProcCreateOrder,
+                    new object[] {
+                        value.OrderId,
+                        value.UserId,
+                        value.Address,
+                        value.Total,
+                        value.Date,
+                        value.isPaid
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool createOrderDetail(OrderDetail value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Order.ProcCreateOrderDetail,
+                    new object[] {
+                        value.OrderId,
+                        value.ProductId,
+                        value.Quantity
+
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool rechargeAccount(AccountMoney value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcRechargeAccount,
+                    new object[] {
+                        value.UserId,
+                        value.moneyAdd
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public DataTable getOrder(string userId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Order.ProcGetOrder,
+                new object[] {
+                    userId
+                });
+            return result;
+        }
+
+        public DataTable getOrderDetail(string orderID)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Order.ProcGetOrderDetail,
+                new object[] {
+                    orderID
+                });
+            return result;
+        }
+
+        public bool MakePayment(OrderDetail value, string paymentId, string dateCheckout)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.Order.ProcMakePayment,
+                    new object[] {
+                        paymentId,
+                        dateCheckout,
+                        value.OrderId,
+                        value.ProductId,
+                        value.Quantity
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        } 
+
+        public DataTable getShippingLog(string orderId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.Transport.ProcGetShippingLog,
+                new object[] {
+                    orderId
+                });
+            return result;
+        }
+
+        public DataTable getCurrentBalance(string userid)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcGetCurrentBalance,
+                new object[] {
+                    userid
                 });
             return result;
         }
