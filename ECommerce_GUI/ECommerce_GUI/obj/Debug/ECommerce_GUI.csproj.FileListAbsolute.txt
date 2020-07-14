@@ -63,12 +63,11 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.c
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.csproj.CopyComplete
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.exe
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.pdb
-D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Customer.g.cs
-D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Customer.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\ToastNotifications.dll
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\ToastNotifications.Messages.dll
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Library.dll
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Library.pdb
+<<<<<<< HEAD
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller.baml
 C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\bin\Debug\ECommerce_GUI.exe.config
@@ -198,3 +197,41 @@ C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Deb
 C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.csproj.CopyComplete
 C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.exe
 C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\ECommerce_GUI.pdb
+=======
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ProductMain.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ProductMain.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DisplayProdudct.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DisplayProdudct.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\CustomerWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DetailProduct.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ReviewProduct.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\SellerWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\CustomerWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DetailProduct.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ReviewProduct.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\SellerWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\AddressWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\AddressWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.baml
+>>>>>>> customerService

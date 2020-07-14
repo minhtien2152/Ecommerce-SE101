@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+
 using System.Diagnostics;
 using System.Security.Claims;
 using System.Text;
 using Library.Models;
-
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
@@ -52,6 +52,34 @@ namespace ECommerce_Server.Controllers
             return new JsonResult(new ApiResponse<object>(200, "signin failed"));
         }
 
+        [HttpPost("RechargeAccount")]
+        public async Task<IActionResult> PostRechargeAccount([FromBody] AccountMoney value)
+        {
+            if (BUS_Controls.Controls.rechargeAccount(value))
+            {
+                return new JsonResult(new ApiResponse<object>("recharge ok")); 
+            }
+            return new JsonResult(new ApiResponse<object>(200, "recharge fail")); 
+        }
+
+        [HttpGet("GetCurrentBalance/ID={id}")]
+        public async Task<IActionResult> GetCurrentBalance(string id)
+        {
+            double result = BUS_Controls.Controls.getCurrentBalance(id);
+
+            return new JsonResult(new ApiResponse<object>(result)); 
+        }
+
+        [HttpPost("MakePayment")]
+        public async Task<IActionResult> MakePayment(OrderDetail value)
+        {
+            if (BUS_Controls.Controls.makePayment(value))
+            {
+                return new JsonResult(new ApiResponse<object>("payment successful"));
+            }
+            return new JsonResult(new ApiResponse<object>(200, "payment fail")); 
+        }
+
         private string GenerateJSONWebToken(Account profile)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JwtSettings:Secret"]));
@@ -64,7 +92,7 @@ namespace ECommerce_Server.Controllers
             };
 
             var token = new JwtSecurityToken(null, null, claims,
-                                expires: DateTime.Now.AddMinutes(10080),
+                                expires: DateTime.Now.AddMinutes(300),
                                 signingCredentials: credentials);
             var encodeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodeToken;

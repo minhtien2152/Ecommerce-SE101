@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\App.xaml;;
 FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\Login\SignIn.xaml;;
@@ -11,4 +12,22 @@ FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\M
 FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\UCOrder.xaml;;
 FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\MainWindow.xaml;;
 FC:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\Resource\Art\ArtResource.xaml;;
+=======
+﻿D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignIn.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignUp.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\AddressWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\CartMain.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\DisplayCart.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\CustomerWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\DetailProduct.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\DisplayProdudct.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\ProductMain.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\ReviewProduct.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\RechargeWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\SellerWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Resource\Art\ArtResource.xaml;;
+>>>>>>> customerService
 

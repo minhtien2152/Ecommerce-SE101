@@ -2,31 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API.Shared.APIResponse;
-using ECommerce_Server.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
+using System.Diagnostics;
+using System.Security.Claims;
+using System.Text;
+using Library.Models;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
 using ServerFTM.BUS;
+using API.Shared.APIResponse;
 
 namespace ECommerce_Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class ProductController : ControllerBase
     {
-        [HttpPost("Add")]
-        public async Task<IActionResult> AddProduct([FromBody] ProductInfo productInfo)
+        [HttpGet("GetTopSellingProductId")]
+        public async Task<IActionResult> GetTopSellingProduct()
         {
-            if (BUS_Controls.Controls.AddProduct(productInfo))
-            {
-                return new JsonResult(new ApiResponse<bool>(true));
-            }
-            else
-            {
-                return new JsonResult(new ApiResponse<bool>(true));
-            }
+            List<string> result = BUS_Controls.Controls.getTopSellingProductId();
+            return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpGet("GetAllProductId")]
+        public async Task<IActionResult> GetAllProductId()
+        {
+            List<string> result = BUS_Controls.Controls.getAllProductId();
+            return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpGet("GetProductDisplay/ID={id}")]
+        public async Task<IActionResult> GetProductDisplay(string id)
+        {
+            ProductDisplay result = BUS_Controls.Controls.getProductDisplay(id);
+            return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpGet("GetProductDetail/ID={id}")]
+        public async Task<IActionResult> GetProductDetail(string id)
+        {
+            ProductDetail result = BUS_Controls.Controls.getProductDetail(id);
+            return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpGet("GetProductImg/ID={id}")]
+        public async Task<IActionResult> GetProductImg(string id)
+        {
+            List<string> result = BUS_Controls.Controls.getProductImg(id);
+            return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpGet("GetProductReview/ID={id}")]
+        public async Task<IActionResult> GetProductReview(string id)
+        {
+            List<ProductReview> result = BUS_Controls.Controls.getProductReview(id);
+            return new JsonResult(new ApiResponse<object>(result));
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿ECommerce_GUI
 
 
-winexe
+exe
 C#
 .cs
 C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\
@@ -9,12 +9,21 @@ ECommerce_GUI
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\App.xaml
 11-553059675
 
 18-470453873
 142-689539574
 Login\SignIn.xaml;Login\SignUp.xaml;MainApp\Customer.xaml;MainApp\Seller.xaml;MainApp\Seller\DetailProduct.xaml;MainApp\Seller\Element\ChildProductList.xaml;MainApp\Seller\UCAllProducts.xaml;MainApp\Seller\UCDetailProduct.xaml;MainApp\Seller\UCOrder.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
+=======
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml
+14-398761121
+
+21-1788805299
+27-1726036174
+Login\SignIn.xaml;Login\SignUp.xaml;MainApp\AddressWindow.xaml;MainApp\Cart\CartMain.xaml;MainApp\Cart\DisplayCart.xaml;MainApp\CustomerWindow.xaml;MainApp\Product\DetailProduct.xaml;MainApp\Product\DisplayProdudct.xaml;MainApp\Product\ProductMain.xaml;MainApp\Product\ReviewProduct.xaml;MainApp\RechargeWindow.xaml;MainApp\SellerWindow.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
+>>>>>>> customerService
 
 True
 
