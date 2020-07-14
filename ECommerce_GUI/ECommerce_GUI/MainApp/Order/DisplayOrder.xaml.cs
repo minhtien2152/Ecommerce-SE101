@@ -35,9 +35,9 @@ namespace ECommerce_GUI.MainApp.Order
 
             if (order.isArrived == 1)
             {
-                this.deliveryText.Text += "Is Delivering";
+                this.deliveryText.Text += "Delivered";
             }
-            else this.deliveryText.Text += "Delivered";
+            else this.deliveryText.Text += "Is Delivering";
 
             if (order.expectedShippingTime == "")
             {
