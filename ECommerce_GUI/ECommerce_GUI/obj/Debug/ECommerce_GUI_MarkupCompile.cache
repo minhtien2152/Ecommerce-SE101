@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml
-17509147358
+18-164617666
 
-231869860332
+241094675781
 27-1726036174
-Login\SignIn.xaml;Login\SignUp.xaml;MainApp\AddressWindow.xaml;MainApp\Cart\CartMain.xaml;MainApp\Cart\DisplayCart.xaml;MainApp\CustomerWindow.xaml;MainApp\Order\DetailOrder.xaml;MainApp\Order\DisplayOrder.xaml;MainApp\Order\OrderMain.xaml;MainApp\Product\DetailProduct.xaml;MainApp\Product\DisplayProdudct.xaml;MainApp\Product\ProductMain.xaml;MainApp\Product\ReviewProduct.xaml;MainApp\RechargeWindow.xaml;MainApp\SellerWindow.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
+Login\SignIn.xaml;Login\SignUp.xaml;MainApp\AddressWindow.xaml;MainApp\Cart\CartMain.xaml;MainApp\Cart\DisplayCart.xaml;MainApp\CustomerWindow.xaml;MainApp\Order\DetailOrder.xaml;MainApp\Order\DisplayDetailOrder.xaml;MainApp\Order\DisplayOrder.xaml;MainApp\Order\OrderMain.xaml;MainApp\Product\DetailProduct.xaml;MainApp\Product\DisplayProdudct.xaml;MainApp\Product\ProductMain.xaml;MainApp\Product\ReviewProduct.xaml;MainApp\RechargeWindow.xaml;MainApp\SellerWindow.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
 
 False
 

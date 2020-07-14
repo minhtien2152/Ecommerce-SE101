@@ -11,16 +11,15 @@
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Image Name="productImg" Grid.Column="0" Margin="10"/>
-            <StackPanel Grid.Column="1" Margin="10 0 0 0">
-                <TextBlock Name="productName" MaxHeight="60"
+            <StackPanel Grid.Column="1" Margin="30 0 0 0">
+                <TextBlock Name="productName" 
                         Height="auto"
                         FontWeight="SemiBold"
                         TextDecorations="Underline"
-                        TextWrapping="Wrap"
                            FontSize="18"
                         Text="Súng Lục Glock97"/>
                 <TextBlock Name="productPrice" Text="123.456 VNĐ" Foreground="Red" FontSize="25"/>

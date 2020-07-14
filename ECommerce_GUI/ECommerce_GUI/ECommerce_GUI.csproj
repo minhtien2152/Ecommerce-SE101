@@ -122,6 +122,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MainApp\Order\DisplayDetailOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainApp\Order\DisplayOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +189,9 @@
     </Compile>
     <Compile Include="MainApp\Order\DetailOrder.xaml.cs">
       <DependentUpon>DetailOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp\Order\DisplayDetailOrder.xaml.cs">
+      <DependentUpon>DisplayDetailOrder.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainApp\Order\DisplayOrder.xaml.cs">
       <DependentUpon>DisplayOrder.xaml</DependentUpon>

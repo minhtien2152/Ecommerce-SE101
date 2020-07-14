@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ECommerce_GUI.Helper;
+using FlightTicketManagement.Helper;
+using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,57 @@ namespace ECommerce_GUI.MainApp.Order
         public DetailOrder()
         {
             InitializeComponent();
+        }
+
+        public void removeView()
+        {
+            CustomerWindow.Instance.removeUIElement(this);
+            this.IsEnabled = false;
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            removeView();
+        }
+
+        public async void initData(string orderId)
+        {
+            Response<List<OrderDetail>> orderDetailList = await APIHelper.Instance.Get<Response<List<OrderDetail>>>
+                (ApiRoutes.Order.getOrderDetail.Replace("{id}", orderId));
+
+            await Task.Factory.StartNew(() =>
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    foreach (var item in orderDetailList.Result)
+                    {
+                        DisplayDetailOrder newDisplay = new DisplayDetailOrder();
+                        newDisplay.Margin = new Thickness(0, 10, 0, 10);
+                        newDisplay.initData(item);
+
+                        this.orderDetailPanel.Children.Add(newDisplay);
+                    }
+                });
+            });
+            await initShippingLog(orderId);
+        }
+
+        private async Task initShippingLog(string orderId)
+        {
+            Response<List<ShippingLog>> logList = await APIHelper.Instance.Get<Response<List<ShippingLog>>>
+                (ApiRoutes.Transport.getShippingLog.Replace("{id}", orderId));
+
+            await Task.Factory.StartNew(() =>
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    foreach (var item in logList.Result)
+                    {
+                        this.shippingLog.Text += $"[{string.Format("{0:dd/MM/yyyy HH:mm:ss}", item.date)}] " +
+                            $"{item.content}" + "\n=================================\n"; 
+                    }
+                });
+            });
         }
     }
 }

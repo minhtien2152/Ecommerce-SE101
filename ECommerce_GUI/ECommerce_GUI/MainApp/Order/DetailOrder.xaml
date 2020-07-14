@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Order"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="666" d:DesignWidth="1150"
+             Background="WhiteSmoke">
     <Grid>
-            
+            <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <StackPanel Name="orderDetailPanel" Margin="200 10 200 0"
+                        x:FieldModifier="public">
+                    <Button Name="back" Margin="0 10 700 1" 
+                        Background="Transparent" Padding="0"
+                        BorderThickness="0"
+                        Click="back_Click" Height="52"  >
+                        <materialDesign:PackIcon Kind="ArrowBack" Foreground="Black" Width="46" Height="38"
+                                             Margin="0 0 0 0"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Margin="200 10 200 10" Background="White">
+                    <TextBlock Text="Shipping State" FontSize="30" FontWeight="Bold"/>
+                    <TextBlock Name="shippingLog" FontSize="25" TextWrapping="Wrap"
+                               Padding="0 10 0 0"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

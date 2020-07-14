@@ -62,7 +62,11 @@ namespace ECommerce_GUI.MainApp.Order
 
         private void detail_Click(object sender, RoutedEventArgs e)
         {
+            DetailOrder newDetail = new DetailOrder();
+            newDetail.initData(order.OrderId);
 
+            CustomerWindow.Instance.addUIElement(newDetail);
+            CustomerWindow.Instance.bringToFront(newDetail);
         }
 
         private void receive_Click(object sender, RoutedEventArgs e)

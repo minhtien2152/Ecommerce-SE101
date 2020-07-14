@@ -110,7 +110,7 @@ namespace ECommerce_GUI.MainApp.Product
                         sumRating += item.Rating;
                         countRating++;
 
-                        string reviewDisplay = $"{item.userName} ({item.DatePost}): {item.Content}" +
+                        string reviewDisplay = $"{item.userName} [{item.DatePost}] -> {item.Content}" +
                             "\n=================================\n";
                         reviewText.Text += reviewDisplay;
                     }

@@ -46,6 +46,11 @@ namespace ECommerce_GUI.Helper
             public const string getOrderDetail = Base + "/Order/GetOrderDetail/OrderId={id}";
         }
 
+        public static class Transport
+        {
+            public const string getShippingLog = Base + "/Transport/GetShippingLog/OrderId={id}";
+        }
+
         public class Utility
         {
             public static string makeCheckCartURL(Library.Models.Cart value)

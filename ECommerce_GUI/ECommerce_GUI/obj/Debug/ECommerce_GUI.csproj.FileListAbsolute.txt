@@ -109,3 +109,5 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\O
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DetailOrder.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DisplayOrder.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\OrderMain.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DisplayDetailOrder.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DisplayDetailOrder.baml

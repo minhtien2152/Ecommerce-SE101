@@ -29,7 +29,7 @@ namespace ServerFTM.DAL.Controls
         {
             try
             {
-                DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
                     new object[] {
                             profile.UserId,
                             profile.userName,
@@ -41,7 +41,7 @@ namespace ServerFTM.DAL.Controls
                             profile.Address,
                             profile.email,
                             profile.lastEdit
-                    });
+                    }) > 0;
             }
             catch (Exception e)
             {

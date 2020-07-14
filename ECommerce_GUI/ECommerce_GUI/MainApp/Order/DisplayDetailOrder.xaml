@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ECommerce_GUI.MainApp.Order.DisplayDetailOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Order"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="750"
+             Width="750" Height="150"
+             Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Margin="10" Name="productImg"></Image>
+        <StackPanel Grid.Column="1" Margin="10 0 0 0" Orientation="Horizontal">
+            <Canvas Width="3" Margin="0 10 0 10" Background="Black"></Canvas>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="25 0 0 0">
+            <TextBlock Name="productName" TextDecorations="underline"
+                       FontSize="18" FontWeight="DemiBold" Margin="0 3 0 3"></TextBlock>
+            <TextBlock Name="unitPrice" Text="4564 VNĐ" Margin="0 3 0 3"
+                       Foreground="Red"
+                       FontSize="25" FontWeight="DemiBold"></TextBlock>
+            <TextBlock Name="quantity" Text="Quantity: " Margin="0 3 0 3"
+                       FontSize="15"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
