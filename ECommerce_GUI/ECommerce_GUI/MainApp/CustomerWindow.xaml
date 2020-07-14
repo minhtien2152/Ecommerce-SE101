@@ -20,6 +20,34 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Panel.ZIndex="1"
+                    Margin="0 0 0 50"
+                    Orientation="Horizontal"
+                    FlowDirection="LeftToRight">
+            <Button x:Name="homePage"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Content="Home"
+                    Click="homePage_Click">
+            </Button>
+            <Button x:Name="rechargeAccount"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Content="Recharge Account"
+                    Click="rechargeAccount_Click">
+
+            </Button>
+            <Button x:Name="sellerPage"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Content="Seller Channel"
+                    Click="sellerPage_Click">
+            </Button>
+            <ProgressBar Name="watting" Style="{StaticResource MaterialDesignCircularProgressBar}"
+                        Foreground="White"
+                        Visibility="Visible"
+                        Width="30" Height="Auto" Value="0" IsIndeterminate="True" Margin="0,10,0,8.6"/>
+        </StackPanel>
         <StackPanel Grid.Row="0"
               Background="#FFD44D27"
               MouseLeftButtonDown="tileBar_MouseLeftButtonDown">
@@ -41,40 +69,13 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Foreground="White"
-                        FontSize="15"
+                        FontSize="20"
+                        Padding="3"
                         FontWeight="SemiBold"
                         MaxWidth="256"/>
                 <Image Source="{StaticResource user}"
                        Stretch="Fill"
                        Margin="5"/>
-                <StackPanel Width="1007" Margin="0,0,0,-0.4"
-                            Orientation="Horizontal"
-                            FlowDirection="LeftToRight">
-                    <Button x:Name="homePage"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Content="Home"
-                            Click="homePage_Click">
-                    </Button>
-                    <Button x:Name="rechargeAccount"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Content="Recharge Account"
-                            Click="rechargeAccount_Click">
-
-                    </Button>
-                    <Button x:Name="sellerPage"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Content="Seller Channel"
-                            Click="sellerPage_Click">
-                    </Button>
-                    <ProgressBar Name="watting" Style="{StaticResource MaterialDesignCircularProgressBar}"
-                                 Foreground="White"
-                                 Visibility="Visible"
-                                 Width="30" Height="Auto" Value="0" IsIndeterminate="True" Margin="0,10,0,8.6"/>
-                </StackPanel>
-
             </StackPanel>
             <StackPanel Height="50"
                         Orientation="Horizontal">
@@ -104,6 +105,15 @@
                         Padding="0" Height="Auto"
                         Click="cart_Click">
                     <materialDesign:PackIcon Kind="Cart"
+                                             Foreground="White" Width="29" Height="30"/>
+                </Button>
+                <Button Name="orders"
+                        Margin="10,5,0,4.6" Width="34"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Padding="0" Height="Auto"
+                        Click="orders_Click">
+                    <materialDesign:PackIcon Kind="TruckDelivery"
                                              Foreground="White" Width="29" Height="30"/>
                 </Button>
             </StackPanel>

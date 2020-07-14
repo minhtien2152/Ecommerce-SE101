@@ -13,5 +13,7 @@ namespace Library.Models
         public string Date { get; set; }
         public int isPaid { get; set; }
         public int isArrived { get; set; }
+        public string expectedShippingTime { get; set; }
+        public int customerRecived { get; set; }
     }
 }

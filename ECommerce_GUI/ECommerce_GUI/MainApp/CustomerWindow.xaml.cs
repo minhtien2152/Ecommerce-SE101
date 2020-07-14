@@ -1,5 +1,6 @@
 ﻿using ECommerce_GUI.Helper;
 using ECommerce_GUI.MainApp.Cart;
+using ECommerce_GUI.MainApp.Order;
 using ECommerce_GUI.MainApp.Product;
 using FlightTicketManagement.Helper;
 using Library.Models;
@@ -113,6 +114,8 @@ namespace ECommerce_GUI.MainApp
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            username.Content = AuthenticatedUser.user.userName;
+
             ProductMain products = new ProductMain();
             this.addUIElement(products);
             this.bringToFront(products);
@@ -136,6 +139,8 @@ namespace ECommerce_GUI.MainApp
 
         private async void rechargeAccount_Click(object sender, RoutedEventArgs e)
         {
+            CustomerWindow.Instance.startWaitting();
+
             RechargeWindow recharge = new RechargeWindow();
             recharge.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
@@ -150,6 +155,7 @@ namespace ECommerce_GUI.MainApp
                 Response<object> response = await APIHelper.Instance.Post<Response<object>>
                     (ApiRoutes.Account.rechargeAccount, moneyAdd);
             }
+            CustomerWindow.Instance.endWatting();
         }
 
         private void homePage_Click(object sender, RoutedEventArgs e)
@@ -161,6 +167,15 @@ namespace ECommerce_GUI.MainApp
             this.bringToFront(products);
 
             products.refreshData();
+        }
+
+        private void orders_Click(object sender, RoutedEventArgs e)
+        {
+            OrderMain orders = new OrderMain();
+            this.addUIElement(orders);
+            this.bringToFront(orders);
+
+            orders.initData();
         }
     }
 }

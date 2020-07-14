@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Cart"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="750"
+             Width="750" Height="150"
              Background="White">
     <Grid>
         <Grid>

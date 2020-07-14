@@ -83,7 +83,7 @@ namespace ECommerce_GUI.MainApp.Cart
 
             if (dialogResult == true)
             {
-                Order newOrder = new Order();
+                Library.Models.Order newOrder = new Library.Models.Order();
                 newOrder.UserId = AuthenticatedUser.user.UserId;
                 newOrder.Address = getAddress.deliveryAddress;
                 newOrder.Date = string.Format("{0:yyyy/MM/dd HH:mm:ss}", DateTime.Now.ToString());
@@ -118,7 +118,7 @@ namespace ECommerce_GUI.MainApp.Cart
             }
         }
 
-        private async Task createOrderOnly(Order value)
+        private async Task createOrderOnly(Library.Models.Order value)
         {
             Response<string> orderId = await APIHelper.Instance.Post<Response<string>>
                 (ApiRoutes.Order.createOrder, value);
@@ -141,7 +141,7 @@ namespace ECommerce_GUI.MainApp.Cart
             }
         }
 
-        private async Task makePaymentOnline(Order value)
+        private async Task makePaymentOnline(Library.Models.Order value)
         {
             Response<string> orderId = await APIHelper.Instance.Post<Response<string>>
                 (ApiRoutes.Order.createOrder, value);

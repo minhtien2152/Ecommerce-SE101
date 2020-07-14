@@ -7,4 +7,10 @@
                  UriSource="appIcon.png"/>
     <BitmapImage x:Key="user"
                  UriSource="user.png"/>
+    <BitmapImage x:Key="notify1"
+                 UriSource="notify1.png"/>
+    <BitmapImage x:Key="notify2"
+                 UriSource="notify2.png"/>
+    <BitmapImage x:Key="notify3"
+                 UriSource="notify3.png"/>
 </ResourceDictionary>

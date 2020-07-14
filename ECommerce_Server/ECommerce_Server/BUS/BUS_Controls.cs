@@ -253,6 +253,8 @@ namespace ServerFTM.BUS
                     item.Date = row["Date"].ToString();
                     item.isPaid = int.Parse(row["isPaid"].ToString());
                     item.isArrived = int.Parse(row["isArrived"].ToString());
+                    item.expectedShippingTime = row["expectedShippingTime"].ToString();
+                    item.customerRecived = int.Parse(row["customerRecived"].ToString());
 
                     result.Add(item);
                 }

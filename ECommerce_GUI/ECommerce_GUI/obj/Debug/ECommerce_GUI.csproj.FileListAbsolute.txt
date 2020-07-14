@@ -103,3 +103,9 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Address
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\AddressWindow.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DetailOrder.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DisplayOrder.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\OrderMain.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DetailOrder.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\DisplayOrder.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Order\OrderMain.baml
