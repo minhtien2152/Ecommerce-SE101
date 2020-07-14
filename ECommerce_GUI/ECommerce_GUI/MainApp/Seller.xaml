@@ -230,8 +230,8 @@
                                 <StackPanel
                             Orientation="Vertical"
                             TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                    <Button Style="{StaticResource stylebtnMenu}" Content="Tất cả sản phẩm"/>
-                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thêm sản phẩm"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Doanh thu theo tháng"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Doanh thu theo năm"/>
                                 </StackPanel>
                             </Expander>
                             <Expander
@@ -244,8 +244,8 @@
                                 <StackPanel
                             Orientation="Vertical"
                             TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                    <Button Style="{StaticResource stylebtnMenu}" Content="Tất cả sản phẩm"/>
-                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thêm sản phẩm"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thông tin shop"/>
+                                    <Button Style="{StaticResource stylebtnMenu}" Content="Thông tin tài khoản"/>
                                 </StackPanel>
                             </Expander>
                         </StackPanel>

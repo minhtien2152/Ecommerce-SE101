@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj": {}
+    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj": {
+    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\Library.csproj",
         "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_GUI\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",

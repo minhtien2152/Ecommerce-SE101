@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\
+C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\obj\Debug\
 ECommerce_GUI
 none
 false
 DEBUG;TRACE
-C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\App.xaml
-101270360044
+C:\Users\Minh\Desktop\gittem\Ecommerce-SE101\ECommerce_GUI\ECommerce_GUI\App.xaml
+11-553059675
 
-161700867932
-23609235865
-Login\SignIn.xaml;Login\SignUp.xaml;MainApp\Customer.xaml;MainApp\Seller.xaml;MainApp\Seller\DetailProduct.xaml;MainApp\Seller\Element\ChildProductList.xaml;MainApp\Seller\UCAllProducts.xaml;MainApp\Seller\UCDetailProduct.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
+17371905494
+1421961602377
+Login\SignIn.xaml;Login\SignUp.xaml;MainApp\Customer.xaml;MainApp\Seller.xaml;MainApp\Seller\DetailProduct.xaml;MainApp\Seller\Element\ChildProductList.xaml;MainApp\Seller\UCAllProducts.xaml;MainApp\Seller\UCDetailProduct.xaml;MainApp\Seller\UCOrder.xaml;MainWindow.xaml;Resource\Art\ArtResource.xaml;
 
 False
 

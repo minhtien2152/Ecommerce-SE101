@@ -66,20 +66,7 @@ namespace ServerFTM.DAL.Controls
 
         internal bool AddProduct(ProductInfo productInfo)
         {
-            DataTable result;
-            try
-            {
-                result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcProductAdd,
-                    new object[] {
-                        profile.userName,
-                        profile.password
-                    });
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-            return result;
+            return true;
         }
     }
 }

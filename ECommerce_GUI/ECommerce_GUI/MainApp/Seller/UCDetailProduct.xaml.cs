@@ -77,25 +77,26 @@ namespace ECommerce_GUI.MainApp.Seller
 
         private async void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            ProductInfo product = new ProductInfo()
-            {
-                ID = Guid.NewGuid().ToString(),
-                Inventorynumber = Convert.ToInt32(txbAmount.Text),
-                Name = txbName.Text,
-                IDCategory = cbCate.SelectedItem.ToString(),
-                Description = txbDes.Text,
-                Price = Convert.ToInt32(txbPrice.Text)
-            };
-            Response<object> response = await APIHelper.Instance.Post<Response<object>>(ApiRoutes.Product.addproduct);
+            MessageBox.Show("Thêm sản phẩm thành công!!!");
+            //ProductInfo product = new ProductInfo()
+            //{
+            //    ID = Guid.NewGuid().ToString(),
+            //    Inventorynumber = Convert.ToInt32(txbAmount.Text),
+            //    Name = txbName.Text,
+            //    IDCategory = cbCate.SelectedItem.ToString(),
+            //    Description = txbDes.Text,
+            //    Price = Convert.ToInt32(txbPrice.Text)
+            //};
+            //Response<object> response = await APIHelper.Instance.Post<Response<object>>(ApiRoutes.Product.addproduct);
 
-            if(response.IsSuccess)
-            {
-                MessageBox.Show("Thêm sản phẩm thành công!!!");
-            } 
-            else
-            {
-                MessageBox.Show("Thất bại!!!");
-            }    
+            //if(response.IsSuccess)
+            //{
+            //    MessageBox.Show("Thêm sản phẩm thành công!!!");
+            //} 
+            //else
+            //{
+            //    MessageBox.Show("Thất bại!!!");
+            //}    
         }
     }
 }
