@@ -16,6 +16,7 @@ namespace ECommerce_GUI.Helper
             public const string signin = Base + "/Account/SignIn";
             public const string getCurrentBalance = Base + "/Account/GetCurrentBalance/ID={id}";
             public const string makePayment = Base + "/Account/MakePayment";
+            public const string rechargeAccount = Base + "/Account/RechargeAccount";
         }
 
         public static class Product
