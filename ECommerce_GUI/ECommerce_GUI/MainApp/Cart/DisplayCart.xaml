@@ -14,7 +14,7 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Name="productImg" Grid.Column="0" Margin="10"/>
+            <Image Name="productImg" Grid.Column="0" Margin="10" Stretch="Uniform"/>
             <StackPanel Grid.Column="1" Margin="30 0 0 0">
                 <TextBlock Name="productName" 
                         Height="auto"

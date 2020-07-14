@@ -193,7 +193,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainApp\Product\ReviewProduct.xaml">
+    <Page Include="MainApp\Product\ProductSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -275,8 +275,8 @@
     <Compile Include="MainApp\Product\ProductMain.xaml.cs">
       <DependentUpon>ProductMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainApp\Product\ReviewProduct.xaml.cs">
-      <DependentUpon>ReviewProduct.xaml</DependentUpon>
+    <Compile Include="MainApp\Product\ProductSearch.xaml.cs">
+      <DependentUpon>ProductSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainApp\RechargeWindow.xaml.cs">
       <DependentUpon>RechargeWindow.xaml</DependentUpon>

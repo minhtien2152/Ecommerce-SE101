@@ -60,7 +60,7 @@ namespace ECommerce_GUI.MainApp.Product
                     bitmap.EndInit();
 
                     productMainUrl.ImageSource = bitmap;
-                    productMainUrl.Stretch = Stretch.Fill;
+                    productMainUrl.Stretch = Stretch.Uniform;
                 });
             });
         }

@@ -66,7 +66,6 @@ namespace ECommerce_GUI.MainApp.Cart
                     bitmap.EndInit();
 
                     productImg.Source = bitmap;
-                    productImg.Stretch = Stretch.Fill;
                 });
             });
         }

@@ -177,5 +177,19 @@ namespace ECommerce_GUI.MainApp
 
             orders.initData();
         }
+
+        private async void search_Click(object sender, RoutedEventArgs e)
+        {
+            string searchKey = searchBar.Text;
+
+            Response<List<Library.Models.ProductSearch>> response = await APIHelper.Instance.Get<Response<List<Library.Models.ProductSearch>>>
+                (ApiRoutes.Product.getProductSearchList.Replace("{search}", searchKey));
+
+            Product.ProductSearch newDisplay = new Product.ProductSearch();
+            this.addUIElement(newDisplay);
+            this.bringToFront(newDisplay);
+
+            newDisplay.initData(response.Result);
+        }
     }
 }

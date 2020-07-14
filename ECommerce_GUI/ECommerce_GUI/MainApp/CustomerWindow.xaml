@@ -87,13 +87,14 @@
                            VerticalAlignment="Center"
                            FontSize="25"
                            FontWeight="SemiBold"/>
-                <ComboBox Name="searchBar" Margin="10,10,0,7.6" Width="946" Height="32"
+                <TextBox Name="searchBar" Margin="10,10,0,7.6" Width="946" Height="32"
+                         FontSize="20" FontWeight="DemiBold"
                           Background="White"
-                          IsEditable="True"
                           Foreground="Black"/>
                 <Button Name="search"
                         Margin="10,9,0,8.6" Width="34"
                         Background="#FF6BD05B"
+                        Click="search_Click"
                         Padding="0">
                     <materialDesign:PackIcon Kind="Search"
                                              Foreground="White"/>

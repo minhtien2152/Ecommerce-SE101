@@ -89,11 +89,9 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\sv\Xceed.Wpf.Av
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\CustomerWindow.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DetailProduct.g.cs
-D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ReviewProduct.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\SellerWindow.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\CustomerWindow.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\DetailProduct.baml
-D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ReviewProduct.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\SellerWindow.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.baml
@@ -150,3 +148,5 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller\
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller\UCAllProducts.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller\UCDetailProduct.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Seller\UCOrder.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ProductSearch.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Product\ProductSearch.baml

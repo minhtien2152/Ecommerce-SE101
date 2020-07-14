@@ -63,5 +63,12 @@ namespace ECommerce_Server.Controllers
             List<ProductReview> result = BUS_Controls.Controls.getProductReview(id);
             return new JsonResult(new ApiResponse<object>(result));
         }
+
+        [HttpGet("GetProductSearchList/Search={search}")]
+        public async Task<IActionResult> GetProductSearchList(string search)
+        {
+            List<ProductSearch> result = BUS_Controls.Controls.getProductSearchList(search);
+            return new JsonResult(new ApiResponse<object>(result));
+        }
     }
 }

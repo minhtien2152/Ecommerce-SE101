@@ -90,6 +90,7 @@ namespace ServerFTM.DAL.Controls
             return result;
         }
 
+
         public DataTable getProductDetail(string productId)
         {
             DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetProductDetail,
@@ -293,6 +294,15 @@ namespace ServerFTM.DAL.Controls
             DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcGetCurrentBalance,
                 new object[] {
                     userid
+                });
+            return result;
+        }
+
+        public DataTable getProductSearchList(string search)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcSearchProduct,
+                new object[] {
+                    search
                 });
             return result;
         }

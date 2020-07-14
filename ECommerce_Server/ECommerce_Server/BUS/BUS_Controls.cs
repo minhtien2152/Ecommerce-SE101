@@ -315,6 +315,26 @@ namespace ServerFTM.BUS
             return double.NaN;
         }
 
+        public List<ProductSearch> getProductSearchList(string search)
+        {
+            List<ProductSearch> result = new List<ProductSearch>();
+
+            DataTable res = DAL_Controls.Controls.getProductSearchList(search);
+
+            if (res != null)
+            {
+                foreach(DataRow row in res.Rows)
+                {
+                    ProductSearch newItem = new ProductSearch();
+                    newItem.ProductId = row["ProductId"].ToString();
+                    newItem.ProductName = row["ProductName"].ToString();
+
+                    result.Add(newItem);
+                }
+            }
+            return result;
+        }
+
         string GenerateID()
         {
             StringBuilder builder = new StringBuilder();

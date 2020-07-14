@@ -41,7 +41,6 @@ namespace ECommerce_GUI.MainApp.Order
                     bitmap.EndInit();
 
                     productImg.Source = bitmap;
-                    productImg.Stretch = Stretch.Fill;
                 });
             });
         }

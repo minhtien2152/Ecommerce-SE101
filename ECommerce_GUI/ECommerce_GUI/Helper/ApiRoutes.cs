@@ -26,7 +26,8 @@ namespace ECommerce_GUI.Helper
             public const string getProductDisplay = Base + "/Product/GetProductDisplay/ID={id}";
             public const string getProductDetail = Base + "/Product/GetProductDetail/ID={id}";
             public const string getProductImg = Base + "/Product/GetProductImg/ID={id}";
-            public const string getProductReview = Base + "/Product/GetProductReview/ID={id}"; 
+            public const string getProductReview = Base + "/Product/GetProductReview/ID={id}";
+            public const string getProductSearchList = Base + "/Product/GetProductSearchList/Search={search}";
         }
 
         public static class Cart

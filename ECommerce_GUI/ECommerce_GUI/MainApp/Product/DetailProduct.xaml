@@ -27,7 +27,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Image x:Name="productImg" Height="290" Margin="10"
-                               Stretch="Fill">
+                               Stretch="Uniform">
                         </Image>
                         <Grid Height="50" Margin="10">
                             <Grid.ColumnDefinitions>
