@@ -24,6 +24,7 @@ namespace ServerFTM.DAL.Query
             public const string ProcGetProductDetail = "EXECUTE ProcGetProductDetail @productID";
             public const string ProcGetProductReview = "EXECUTE ProcGetProductReview @productID";
             public const string ProcGetProductImage = "EXECUTE ProcGetProductImage @productID";
+            public const string ProcAddProduct = "EXECUTE ProcAddProduct @id , @idshop , @name , @des , @price , @number";
         }
 
         public class Cart
@@ -49,10 +50,5 @@ namespace ServerFTM.DAL.Query
             public const string ProcGetShippingLog = "EXECUTE ProcGetShippingLog @OrderID";
         }
 
-        public class ProductQuery
-        {
-
-            public const string ProcAddProduct = "EXECUTE ProcAddProduct @id , @idshop , @name , @des , @price , @number";
-        }
     }
 }

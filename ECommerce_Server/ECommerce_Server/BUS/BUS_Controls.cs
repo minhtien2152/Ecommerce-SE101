@@ -332,9 +332,10 @@ namespace ServerFTM.BUS
 
         #region Product
 
-        internal bool AddProduct(ProductInfo productInfo)
+        internal bool AddProduct()
         {
-            return DAL_Controls.Controls.AddProduct(productInfo);
+            return true;
+            //return DAL_Controls.Controls.AddProduct(productInfo);
         }
 
         #endregion

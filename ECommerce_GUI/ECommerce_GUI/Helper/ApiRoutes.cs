@@ -26,7 +26,8 @@ namespace ECommerce_GUI.Helper
             public const string getProductDisplay = Base + "/Product/GetProductDisplay/ID={id}";
             public const string getProductDetail = Base + "/Product/GetProductDetail/ID={id}";
             public const string getProductImg = Base + "/Product/GetProductImg/ID={id}";
-            public const string getProductReview = Base + "/Product/GetProductReview/ID={id}"; 
+            public const string getProductReview = Base + "/Product/GetProductReview/ID={id}";
+            public const string addproduct = Base + "/Product/Add";
         }
 
         public static class Cart
@@ -56,11 +57,6 @@ namespace ECommerce_GUI.Helper
                 result = result.Replace("{quantity}", value.Quantity.ToString());
                 return result;
             }
-        }
-
-        public static class Product
-        {
-            public const string addproduct = Base + "/Product/Add";
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {}
+    "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
         "projectName": "API.Shared",
-        "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
         "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\obj\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
         "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
         "projectName": "ECommerce_Server",
-        "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
         "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\obj\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -157,11 +157,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
-                "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj"
+              "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
+                "projectPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj"
               },
-              "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
-                "projectPath": "C:\\Users\\Minh\\Desktop\\gittem\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj"
+              "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
+                "projectPath": "C:\\Users\\Minh\\Desktop\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj"
               }
             }
           }
