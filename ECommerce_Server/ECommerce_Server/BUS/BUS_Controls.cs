@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using Library.Models;
 using System.Diagnostics;
+using ECommerce_Server.Models;
 
 namespace ServerFTM.BUS
 {
@@ -25,6 +26,7 @@ namespace ServerFTM.BUS
             }
             set => controls = value;
         }
+        #region Account
 
         public bool signup(Account profile)
         {
@@ -68,5 +70,17 @@ namespace ServerFTM.BUS
                 .ToList().ForEach(e => builder.Append(e));
             return builder.ToString();
         }
+
+        #endregion
+
+
+        #region Product
+
+        internal bool AddProduct(ProductInfo productInfo)
+        {
+            return DAL_Controls.Controls.AddProduct(productInfo);
+        }
+
+        #endregion
     }
 }

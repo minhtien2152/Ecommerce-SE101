@@ -8,6 +8,7 @@ using ServerFTM.DAL;
 using System.Data;
 using System.Reflection;
 using Library.Models;
+using ECommerce_Server.Models;
 
 namespace ServerFTM.DAL.Controls
 {
@@ -51,6 +52,24 @@ namespace ServerFTM.DAL.Controls
             try
             {
                 result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcSignIn,
+                    new object[] {
+                        profile.userName,
+                        profile.password
+                    });
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return result;
+        }
+
+        internal bool AddProduct(ProductInfo productInfo)
+        {
+            DataTable result;
+            try
+            {
+                result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.AccountQuery.ProcProductAdd,
                     new object[] {
                         profile.userName,
                         profile.password

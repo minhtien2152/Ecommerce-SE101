@@ -13,5 +13,11 @@ namespace ServerFTM.DAL.Query
             public const string ProcSignUp = "EXECUTE ProcSignUp @UserID , @userName , @password , @type , @SignUpDate , @Name , @phoneNum , @Address , @email , @lastEdit";
             public const string ProcSignIn = "EXECUTE ProcSignIn @userName , @password";
         }
+
+        public class ProductQuery
+        {
+
+            public const string ProcAddProduct = "EXECUTE ProcAddProduct @id , @idshop , @name , @des , @price , @number";
+        }
     }
 }

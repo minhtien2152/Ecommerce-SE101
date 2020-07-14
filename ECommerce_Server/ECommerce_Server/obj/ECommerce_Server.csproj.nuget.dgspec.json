@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {}
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
         "projectName": "API.Shared",
-        "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
-        "packagesPath": "C:\\Users\\mingkhoi\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\obj\\",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj",
+        "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mingkhoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,21 +67,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj",
-        "packagesPath": "C:\\Users\\mingkhoi\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
+        "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mingkhoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,21 +130,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
         "projectName": "ECommerce_Server",
-        "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
-        "packagesPath": "C:\\Users\\mingkhoi\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\ECommerce_Server\\obj\\",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\ECommerce_Server.csproj",
+        "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\ECommerce_Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mingkhoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,11 +157,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
-                "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\API.Shared\\API.Shared.csproj"
+              "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj": {
+                "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\API.Shared\\API.Shared.csproj"
               },
-              "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj": {
-                "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj"
+              "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
+                "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj"
               }
             }
           }
@@ -214,6 +214,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -222,7 +228,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="ECommerce_GUI.MainApp.Seller.Element.ChildProductList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Seller.Element"
+             mc:Ignorable="d" Height="242.747" Width="178.524"
+             Background="WhiteSmoke">
+    <Grid>
+
+        <Grid>
+            <Grid MouseDown="Grid_MouseDown">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Image Source="{StaticResource productdefault}"></Image>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock 
+                        x:Name="tbName"
+                        Text="Tên sản phẩm" 
+                        TextWrapping="Wrap" 
+                        Margin="5 0 5 0"
+                        VerticalAlignment="Top"
+                        Height="auto"
+                        MaxHeight="40"
+                        FontWeight="Bold"/>
+
+                    <Grid 
+                        Margin="5 30"
+                        Height="auto">
+                        <TextBlock x:Name="tbPrice" Text="{Binding Price, StringFormat={}{0:#,#} đ}" Foreground="Red"/>
+                            <TextBlock x:Name="tbAmountProduct" Text="{Binding Inventorynumber, StringFormat=Kho hàng: {0}}" HorizontalAlignment="Right"/>
+                    </Grid>
+
+                    <Grid
+                        Margin="5,54,4.8,10.2"
+                        Height="auto"
+                        HorizontalAlignment="Center">
+                        <TextBlock x:Name="tbsoldnumber" Text="{Binding Soldnumber, StringFormat=Đã bán {0}}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <CheckBox 
+                IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                Margin="5 5" 
+                Width="auto"
+                Height="auto"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"/>
+        </Grid>
+    </Grid>
+</UserControl>

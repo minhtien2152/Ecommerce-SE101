@@ -84,7 +84,7 @@ namespace FlightTicketManagement.Helper
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    var data = await response.Content.ReadAsAsync<T>();
+                    var data = await response.Content.ReadAsAsync< T>();
                     if (data != null)
                         return data;
                 }

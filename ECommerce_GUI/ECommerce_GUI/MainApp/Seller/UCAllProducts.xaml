@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ECommerce_GUI.MainApp.Seller.UCAllProducts"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Seller"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1084"
+             Background="White">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ScrollViewer 
+                Grid.Row="1">
+                <ListView
+                    x:Name="lvProduct" 
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    </ListView>
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</UserControl>

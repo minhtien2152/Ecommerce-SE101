@@ -7,4 +7,11 @@
                  UriSource="appIcon.png"/>
     <BitmapImage x:Key="user"
                  UriSource="user.png"/>
+    <BitmapImage x:Key="productdefault"
+                 UriSource="productdefault.png"/>
+    <BitmapImage x:Key="addproduct"
+                 UriSource="Addproduct.png"/>
+    <BitmapImage x:Key="delproduct"
+                 UriSource="delproduct.png"/>
+    
 </ResourceDictionary>

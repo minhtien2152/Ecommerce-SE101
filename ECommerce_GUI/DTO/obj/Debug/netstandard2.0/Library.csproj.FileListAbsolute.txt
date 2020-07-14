@@ -34,3 +34,11 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.As
 D:\Visual Studio\ECommerce\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.csproj.CoreCompileInputs.cache
 D:\Visual Studio\ECommerce\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.dll
 D:\Visual Studio\ECommerce\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.pdb
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\bin\Debug\netstandard2.0\Library.deps.json
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\bin\Debug\netstandard2.0\Library.dll
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\bin\Debug\netstandard2.0\Library.pdb
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.AssemblyInfoInputs.cache
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.AssemblyInfo.cs
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.dll
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.pdb
+C:\Users\Minh\Desktop\Gitminhcode\Ecommerce-SE101\ECommerce_GUI\DTO\obj\Debug\netstandard2.0\Library.csprojAssemblyReference.cache

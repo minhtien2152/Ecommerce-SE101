@@ -15,5 +15,10 @@ namespace ECommerce_GUI.Helper
             public const string signup = Base + "/Account/SignUp";
             public const string signin = Base + "/Account/SignIn";
         }
+
+        public static class Product
+        {
+            public const string addproduct = Base + "/Product/Add";
+        }
     }
 }

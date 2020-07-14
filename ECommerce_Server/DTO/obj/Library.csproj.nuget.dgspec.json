@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj": {}
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj": {
+    "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj",
-        "packagesPath": "C:\\Users\\mingkhoi\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\Library.csproj",
+        "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Minh\\Desktop\\Gitminhcode\\Ecommerce-SE101\\ECommerce_Server\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mingkhoi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
