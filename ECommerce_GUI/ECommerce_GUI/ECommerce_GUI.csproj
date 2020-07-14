@@ -102,6 +102,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MainApp\AddressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainApp\Cart\CartMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +134,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MainApp\RechargeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainApp\SellerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +159,9 @@
     <Compile Include="Login\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainApp\AddressWindow.xaml.cs">
+      <DependentUpon>AddressWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainApp\Cart\CartMain.xaml.cs">
       <DependentUpon>CartMain.xaml</DependentUpon>
     </Compile>
@@ -171,6 +182,9 @@
     </Compile>
     <Compile Include="MainApp\Product\ReviewProduct.xaml.cs">
       <DependentUpon>ReviewProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp\RechargeWindow.xaml.cs">
+      <DependentUpon>RechargeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainApp\SellerWindow.xaml.cs">
       <DependentUpon>SellerWindow.xaml</DependentUpon>

@@ -14,6 +14,8 @@ namespace ECommerce_GUI.Helper
         {
             public const string signup = Base + "/Account/SignUp";
             public const string signin = Base + "/Account/SignIn";
+            public const string getCurrentBalance = Base + "/Account/GetCurrentBalance/ID={id}";
+            public const string makePayment = Base + "/Account/MakePayment";
         }
 
         public static class Product
@@ -32,6 +34,14 @@ namespace ECommerce_GUI.Helper
             public const string InsertCart = Base + "/Cart/InsertCart";
             public const string DeleteCart = Base + "/Cart/DeleteCart";
             public const string GetCart = Base + "/Cart/GetCart/UserId={userId}";
+        }
+
+        public static class Order
+        {
+            public const string createOrder = Base + "/Order/CreateOrder";
+            public const string createOrderDetail = Base + "/Order/CreateOrderDetail";
+            public const string getOrder = Base + "/Order/GetOrder/UserId={id}";
+            public const string getOrderDetail = Base + "/Order/GetOrderDetail/OrderId={id}";
         }
 
         public class Utility

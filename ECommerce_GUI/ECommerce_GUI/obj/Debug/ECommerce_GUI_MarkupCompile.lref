@@ -2,6 +2,7 @@
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\App.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignIn.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Login\SignUp.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\AddressWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\CartMain.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Cart\DisplayCart.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\CustomerWindow.xaml;;
@@ -12,4 +13,5 @@ FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\ReviewPr
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\SellerWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Resource\Art\ArtResource.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\RechargeWindow.xaml;;
 

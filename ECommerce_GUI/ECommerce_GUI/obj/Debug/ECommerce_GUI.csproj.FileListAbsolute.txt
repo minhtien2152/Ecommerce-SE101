@@ -99,3 +99,7 @@ D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\Ca
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\CartMain.baml
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.g.cs
 D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\Cart\DisplayCart.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\AddressWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\AddressWindow.baml
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.g.cs
+D:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\obj\Debug\MainApp\RechargeWindow.baml
