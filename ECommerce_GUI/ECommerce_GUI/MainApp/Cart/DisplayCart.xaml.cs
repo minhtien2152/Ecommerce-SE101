@@ -57,7 +57,7 @@ namespace ECommerce_GUI.MainApp.Cart
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
                     bitmap.UriSource = new Uri(APIHelper.Instance.makeImageUrl(url), UriKind.Absolute);
-                    bitmap.DecodePixelWidth = 1920; 
+                    bitmap.DecodePixelWidth = 254; 
                     bitmap.EndInit();
 
                     productImg.Source = bitmap;
