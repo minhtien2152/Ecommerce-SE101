@@ -73,11 +73,11 @@ namespace ServerFTM.BUS
             return result;
         }
 
-        public List<string> getAllProductId()
+        public List<string> getAllShopProductId_Buyer()
         {
             List<string> result = new List<string>();
 
-            DataTable listId = DAL_Controls.Controls.getAllProductId();
+            DataTable listId = DAL_Controls.Controls.getAllShopProductId_Buyer();
 
             if (listId != null)
             {
@@ -101,6 +101,8 @@ namespace ServerFTM.BUS
                 result.ImgURL = productDisplay.Rows[0]["ImgURL"].ToString();
                 result.Price = double.Parse(productDisplay.Rows[0]["Price"].ToString());
                 result.totalSale = int.Parse(productDisplay.Rows[0]["totalSale"].ToString());
+                result.Quantity = int.Parse(productDisplay.Rows[0]["Quantity"].ToString());
+                result.state = int.Parse(productDisplay.Rows[0]["state"].ToString());
             }
             return result;
         }
@@ -184,7 +186,7 @@ namespace ServerFTM.BUS
 
         public bool clearCart(Cart value)
         {
-            return DAL_Controls.Controls.clearCart(value); 
+            return DAL_Controls.Controls.clearCart(value);
         }
 
         public List<Cart> getCart(string userId)
@@ -215,7 +217,7 @@ namespace ServerFTM.BUS
             {
                 return value.OrderId;
             }
-            return ""; 
+            return "";
         }
 
         public bool createOrderDetail(OrderDetail value)
@@ -323,7 +325,7 @@ namespace ServerFTM.BUS
 
             if (res != null)
             {
-                foreach(DataRow row in res.Rows)
+                foreach (DataRow row in res.Rows)
                 {
                     ProductSearch newItem = new ProductSearch();
                     newItem.ProductId = row["ProductId"].ToString();
@@ -333,6 +335,71 @@ namespace ServerFTM.BUS
                 }
             }
             return result;
+        }
+
+        public List<Shop> getShop(string userId)
+        {
+            List<Shop> result = new List<Shop>();
+
+            DataTable res = DAL_Controls.Controls.getShop(userId);
+
+            if (res != null)
+            {
+                foreach (DataRow row in res.Rows)
+                {
+                    Shop item = new Shop();
+
+                    item.shopId = row["shopId"].ToString();
+                    item.shopName = row["shopName"].ToString();
+                    item.shopImageUrl = row["shopImageUrl"].ToString();
+
+                    result.Add(item);
+                }
+            }
+            return result;
+        }
+
+        public bool createShop(Shop value)
+        {
+            value.shopId = GenerateID();
+
+            return DAL_Controls.Controls.createShop(value);
+        }
+
+        public string createShopProduct(ProductCreate value)
+        {
+            string result = ""; 
+            value.productId = GenerateID();
+
+            if (DAL_Controls.Controls.createShopProduct(value)) {
+                result = value.productId;
+            }
+            return result;
+        }
+
+        public bool createProductImage(ProductImage value) {
+            return DAL_Controls.Controls.createProductImage(value); 
+        }
+
+        public List<string> getAllShopProductId_Seller(string shopId)
+        {
+            List<string> result = new List<string>();
+
+            DataTable res = DAL_Controls.Controls.getAllShopProductId_Seller(shopId);
+
+            if (res != null)
+            {
+                foreach (DataRow row in res.Rows)
+                {
+                    result.Add(row["ProductId"].ToString());
+                }
+            }
+            return result;
+        }
+
+        public bool updateProductInfo(ProductUpdate value)
+        {
+            return DAL_Controls.Controls.updateProductInfo(value);
         }
 
         string GenerateID()

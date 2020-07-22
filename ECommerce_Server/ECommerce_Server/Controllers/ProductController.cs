@@ -32,7 +32,7 @@ namespace ECommerce_Server.Controllers
         [HttpGet("GetAllProductId")]
         public async Task<IActionResult> GetAllProductId()
         {
-            List<string> result = BUS_Controls.Controls.getAllProductId();
+            List<string> result = BUS_Controls.Controls.getAllShopProductId_Buyer();
             return new JsonResult(new ApiResponse<object>(result));
         }
 
@@ -69,6 +69,14 @@ namespace ECommerce_Server.Controllers
         {
             List<ProductSearch> result = BUS_Controls.Controls.getProductSearchList(search);
             return new JsonResult(new ApiResponse<object>(result));
+        }
+
+        [HttpPost("CreateProductImage")]
+        public async Task<IActionResult> PostCreateImage([FromBody] ProductImage value) {
+            if (BUS_Controls.Controls.createProductImage(value)) {
+                return new JsonResult(new ApiResponse<object>("Create Image Ok"));
+            }
+            return new JsonResult(new ApiResponse<object>("Create Image Failed"));
         }
     }
 }

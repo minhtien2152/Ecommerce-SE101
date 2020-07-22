@@ -24,15 +24,13 @@ namespace ECommerce_GUI.MainApp.Product
     /// </summary>
     public partial class DisplayProduct : UserControl
     {
-        string productId; 
+        string productId;
 
-        public DisplayProduct()
-        {
+        public DisplayProduct() {
             InitializeComponent();
         }
 
-        public async void initData(string productId)
-        {
+        public async void initData(string productId) {
             this.productId = productId;
 
             string apiUrl = ApiRoutes.Product.getProductDisplay;
@@ -48,15 +46,14 @@ namespace ECommerce_GUI.MainApp.Product
             productTotalSale.Text = "Sold " + display.totalSale.ToString();
         }
 
-        public async Task displayUrl(Library.Models.ProductDisplay display)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
+        public async Task displayUrl(Library.Models.ProductDisplay display) {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(display.ImgURL, UriKind.Absolute);
+                    bitmap.UriSource = new Uri(APIHelper.Instance.makeImageUrl(display.ImgURL), 
+                        UriKind.Absolute);
+                    bitmap.DecodePixelWidth = 1920;
                     bitmap.EndInit();
 
                     productMainUrl.ImageSource = bitmap;
@@ -65,8 +62,7 @@ namespace ECommerce_GUI.MainApp.Product
             });
         }
 
-        private void UserControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
+        private void Button_Click(object sender, RoutedEventArgs e) {
             DetailProduct viewDetail = new DetailProduct();
             viewDetail.initData(this.productId);
 

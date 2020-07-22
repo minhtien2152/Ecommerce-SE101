@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "MFPDlnm2hZLWJIHgJvPfvwAXlcmCxPTI5B7vp+UjxFWHkx0jIopPW15Jd9cYLqj/xdfiePrW8T792wLqn/LVxA==",
+  "dgSpecHash": "GXIe5kb2sHpSUv3tESXidBeAaseFZLcYzQmc/3tj+hOEN3Drj3VovBmR+gcYqPMj8xEsTH8u89VJjOascZ/UFA==",
   "success": true,
   "projectFilePath": "D:\\Visual Studio\\ECommerce\\ECommerce_Server\\DTO\\Library.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mingkhoi\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.6\\microsoft.aspnetcore.http.features.3.1.6.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\mingkhoi\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\mingkhoi\\.nuget\\packages\\system.io.pipelines\\4.7.1\\system.io.pipelines.4.7.1.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\mingkhoi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",

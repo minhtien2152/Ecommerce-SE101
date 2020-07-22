@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ECommerce_GUI.MainApp.Seller.DisplayShopProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ECommerce_GUI.MainApp.Seller"
+             mc:Ignorable="d"
+             d:DesignHeight="200"
+             d:DesignWidth="150"
+             Width="150"
+             Height="230"
+             Background="White">
+    <Grid>
+        <Button Padding="0"
+                Background="Transparent"
+                Foreground="Black"
+                BorderThickness="0"
+                Width="150"
+                Height="230"
+                Click="Button_Click">
+            <StackPanel Width="150" Height="230">
+                <Image Name="productImg"
+                       Height="80"
+                       Margin="10 5 10 10" />
+                <TextBlock Name="productName"
+                           TextWrapping="Wrap"
+                           Margin="5 0 5 5"
+                           Text="loading"
+                           Height="50" />
+                <TextBlock Name="quantity"
+                           Height="20"
+                           Text="quantity: "
+                           FontWeight="Light"
+                           Margin="5 0 0 0" />
+                <TextBlock Name="totalSale"
+                           Height="20"
+                           Text="totalsale: "
+                           FontWeight="Light"
+                           Margin="5 0 0 0" />
+                <TextBlock Name="status"
+                           Height="20"
+                           Text="not verified"
+                           Foreground="Red"
+                           FontWeight="Light"
+                           Margin="5 10 0 0" />
+                <Canvas Height="2"
+                        Background="Black"
+                        Margin="0 5 0 0" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</UserControl>

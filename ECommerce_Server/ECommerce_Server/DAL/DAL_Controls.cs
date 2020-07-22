@@ -31,16 +31,16 @@ namespace ServerFTM.DAL.Controls
             {
                 return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.AccountQuery.ProcSignUp,
                     new object[] {
-                            profile.UserId,
-                            profile.userName,
-                            profile.password,
-                            profile.type,
-                            profile.SignUpDate,
-                            profile.Name,
-                            profile.phoneNum,
-                            profile.Address,
-                            profile.email,
-                            profile.lastEdit
+                        profile.UserId,
+                        profile.userName,
+                        profile.password,
+                        profile.type,
+                        profile.SignUpDate,
+                        profile.Name,
+                        profile.phoneNum,
+                        profile.Address,
+                        profile.email,
+                        profile.lastEdit
                     }) > 0;
             }
             catch (Exception e)
@@ -74,9 +74,9 @@ namespace ServerFTM.DAL.Controls
             return result;
         }
 
-        public DataTable getAllProductId()
+        public DataTable getAllShopProductId_Buyer()
         {
-            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetAllProductId);
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ProductQuery.ProcGetAllShopProductId_Buyer);
 
             return result;
         }
@@ -278,7 +278,7 @@ namespace ServerFTM.DAL.Controls
             {
                 return false;
             }
-        } 
+        }
 
         public DataTable getShippingLog(string orderId)
         {
@@ -305,6 +305,101 @@ namespace ServerFTM.DAL.Controls
                     search
                 });
             return result;
+        }
+
+        public DataTable getShop(string userId)
+        {
+            DataTable result = DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ShopQuery.ProcGetShop,
+                new object[]
+                {
+                    userId
+                });
+            return result;
+        }
+            
+        public bool createShop(Shop value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.ShopQuery.ProcCreateShop,
+                    new object[]
+                    {
+                        value.shopId,
+                        value.userId,
+                        value.shopName,
+                        value.shopImageUrl
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool createShopProduct(ProductCreate value)
+        {
+            //try
+            //{
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.ShopQuery.ProcCreateShopProduct,
+                    new object[]
+                    {
+                        value.shopId,
+                        value.productId,
+                        value.productName,
+                        value.description,
+                        value.price,
+                        value.uploadDate,
+                        value.quantity,
+                        value.state
+                    }) > 0;
+            //}
+            //catch (Exception e)
+            //{
+            //    return false;
+            //}
+        }
+
+        public bool createProductImage(ProductImage value) {
+            //try {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.ProductQuery.ProcCreateImage,
+                    new object[]
+                    {
+                        value.productId,
+                        value.imageUrl
+                    }) > 0;
+            //}
+            //catch (Exception e) {
+            //    return false;
+            //}
+        }
+
+        public DataTable getAllShopProductId_Seller(string shopId)
+        {
+            return DataProvider.Instance.ExecuteQuery(DefineSQLQuery.ShopQuery.ProcGetAllShopProductId_Seller,
+                new object[]
+                {
+                    shopId
+                });
+        }
+
+        public bool updateProductInfo(ProductUpdate value)
+        {
+            try
+            {
+                return DataProvider.Instance.ExecuteNonQuery(DefineSQLQuery.ShopQuery.ProcUpdateProductInfo,
+                    new object[]
+                    {
+                        value.productId,
+                        value.productName,
+                        value.quantity,
+                        value.price,
+                        value.description
+                    }) > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

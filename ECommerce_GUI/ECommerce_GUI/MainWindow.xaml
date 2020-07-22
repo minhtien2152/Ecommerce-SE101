@@ -13,11 +13,12 @@
         AllowsTransparency="True"
         Title="MainWindow"
         Height="518.8"
-        Width="800">
+        Width="800"
+        Loaded="Window_Loaded">
     <Grid Background="White"
           Name="mainCanvas"
           MouseLeftButtonDown="mainCanvas_MouseLeftButtonDown">
-        <Image Source="{StaticResource welcomePage}"
+        <Image Source="{StaticResource welcomePage}" Name="test"
                Stretch="Fill" />
         <Grid>
             <Grid.ColumnDefinitions>

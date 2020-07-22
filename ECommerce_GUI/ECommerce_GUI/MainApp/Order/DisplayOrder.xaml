@@ -29,6 +29,8 @@
                         Click="receive_Click" IsEnabled="False"/>
                 <Button Name="detail" Content="Order Detail" Margin="10 0 0 0" Background="#FF613AB7"
                         Click="detail_Click"/>
+                <Button Name="delete" Content="Delete Order" Margin="10 0 0 0" Background="#FFB74C3A"
+                        Click="delete_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

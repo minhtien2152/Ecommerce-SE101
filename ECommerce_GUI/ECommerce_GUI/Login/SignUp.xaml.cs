@@ -28,8 +28,7 @@ namespace ECommerce_GUI.Login
             InitializeComponent();
         }
 
-        private async void signup_Click(object sender, RoutedEventArgs e)
-        {
+        private async void signup_Click(object sender, RoutedEventArgs e) {
             Account newUser = new Account();
 
             newUser.Name = name.Text;
@@ -42,18 +41,15 @@ namespace ECommerce_GUI.Login
             Response<object> responsce = await APIHelper.Instance.Post<Response<object>>
                 (ApiRoutes.Account.signup, newUser);
 
-            if (responsce.IsSuccess)
-            {
+            if (responsce.IsSuccess) {
                 MainWindow.Instance.showLogin();
             }
-            else
-            {
-                MessageBox.Show("sign up failed"); 
+            else {
+                MessageBox.Show("sign up failed");
             }
         }
 
-        private void backToLogin_Click(object sender, RoutedEventArgs e)
-        {
+        private void backToLogin_Click(object sender, RoutedEventArgs e) {
             MainWindow.Instance.showLogin();
         }
     }

@@ -22,25 +22,20 @@ namespace ECommerce_GUI.MainApp
     {
         public double money;
 
-        public RechargeWindow()
-        {
+        public RechargeWindow() {
             InitializeComponent();
         }
 
-        private void moneyBox_KeyDown(object sender, KeyEventArgs e)
-        {
+        private void moneyBox_KeyDown(object sender, KeyEventArgs e) {
             // backspace press 
             if (e.Key == Key.Back)
                 return;
 
             bool keyboardHandle = true;
 
-            if (!e.Key.ToString().Contains("Oem"))
-            {
-                foreach (char item in e.Key.ToString())
-                {
-                    if (char.IsDigit(item))
-                    {
+            if (!e.Key.ToString().Contains("Oem")) {
+                foreach (char item in e.Key.ToString()) {
+                    if (char.IsDigit(item)) {
                         keyboardHandle = false;
                         break;
                     }
@@ -49,21 +44,18 @@ namespace ECommerce_GUI.MainApp
             e.Handled = keyboardHandle;
         }
 
-        private void moneyBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        private void moneyBox_TextChanged(object sender, TextChangedEventArgs e) {
             string text = (sender as TextBox).Text;
             double value = 0.0f;
 
-            if (text.Length > 2 && double.TryParse(text, out value))
-            {
+            if (text.Length > 2 && double.TryParse(text, out value)) {
                 (sender as TextBox).Text = string.Format(System.Globalization.CultureInfo.CurrentCulture,
                     "{0:n0}", value);
                 (sender as TextBox).CaretIndex = (sender as TextBox).Text.Length;
             }
         }
 
-        private void saveBtn_Click(object sender, RoutedEventArgs e)
-        {
+        private void saveBtn_Click(object sender, RoutedEventArgs e) {
             money = double.Parse(moneyBox.Text);
             this.DialogResult = true;
         }

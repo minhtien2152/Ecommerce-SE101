@@ -19,12 +19,22 @@ namespace ServerFTM.DAL.Query
         public class ProductQuery
         {
             public const string ProcGetTopSellingProductId = "EXECUTE ProcGetTopSellingProductId";
-            public const string ProcGetAllProductId = "EXECUTE ProcGetAllProductId";
+            public const string ProcGetAllShopProductId_Buyer = "EXECUTE ProcGetAllShopProductId_Buyer";
             public const string ProcGetProductDisplay = "EXECUTE ProcGetProductDisplay @productID";
             public const string ProcGetProductDetail = "EXECUTE ProcGetProductDetail @productID";
             public const string ProcGetProductReview = "EXECUTE ProcGetProductReview @productID";
             public const string ProcGetProductImage = "EXECUTE ProcGetProductImage @productID";
-            public const string ProcSearchProduct = "EXECUTE ProcSearchProduct @search"; 
+            public const string ProcSearchProduct = "EXECUTE ProcSearchProduct @search";
+            public const string ProcCreateImage = "EXECUTE ProcCreateImage @productID , @imageUrl"; 
+        }
+
+        public class ShopQuery
+        {
+            public const string ProcGetShop = "EXECUTE ProcGetShop @userId";
+            public const string ProcCreateShop = "EXECUTE ProcCreateShop @shopid , @userId , @shopName , @shopImageUrl";
+            public const string ProcCreateShopProduct = "EXECUTE ProcCreateShopProduct @shopid , @productId , @productName , @description , @price , @UploadDate , @quantity , @state";
+            public const string ProcGetAllShopProductId_Seller = "EXECUTE ProcGetAllShopProductId_Seller @shopId";
+            public const string ProcUpdateProductInfo = "EXECUTE ProcUpdateProductInfo @productId , @productName , @quantity , @price , @description";
         }
 
         public class Cart

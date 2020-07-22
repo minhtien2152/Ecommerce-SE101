@@ -20,23 +20,19 @@ namespace ECommerce_GUI.MainApp.Product
     /// </summary>
     public partial class ProductSearch : UserControl
     {
-        public ProductSearch()
-        {
+        public ProductSearch() {
             InitializeComponent();
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
+        private void back_Click(object sender, RoutedEventArgs e) {
             CustomerWindow.Instance.removeUIElement(this);
             this.IsEnabled = false;
         }
 
-        public async void initData(List<Library.Models.ProductSearch> searchList)
-        {
+        public async void initData(List<Library.Models.ProductSearch> searchList) {
             CustomerWindow.Instance.startWaitting();
 
-            foreach (var item in searchList)
-            {
+            foreach (var item in searchList) {
                 DisplayProduct newDisplay = new DisplayProduct();
                 newDisplay.Margin = new Thickness(12);
                 newDisplay.initData(item.ProductId);

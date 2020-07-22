@@ -23,13 +23,11 @@ namespace ECommerce_GUI.MainApp.Product
     /// </summary>
     public partial class ProductMain : UserControl
     {
-        public ProductMain()
-        {
+        public ProductMain() {
             InitializeComponent();
         }
 
-        public async void refreshData()
-        {
+        public async void refreshData() {
             CustomerWindow.Instance.startWaitting();
 
             Response<List<string>> topSellingId = await APIHelper.Instance.Get<Response<List<string>>>
@@ -44,14 +42,10 @@ namespace ECommerce_GUI.MainApp.Product
             CustomerWindow.Instance.endWatting();
         }
 
-        public async Task initTopSelling(List<string> topSellingId)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                foreach (string id in topSellingId)
-                {
-                    this.Dispatcher.Invoke(() =>
-                    {
+        public async Task initTopSelling(List<string> topSellingId) {
+            await Task.Factory.StartNew(() => {
+                foreach (string id in topSellingId) {
+                    this.Dispatcher.Invoke(() => {
                         DisplayProduct product = new DisplayProduct();
                         product.Margin = new Thickness(12);
                         product.initData(id);
@@ -62,14 +56,10 @@ namespace ECommerce_GUI.MainApp.Product
             });
         }
 
-        public async Task initAllProduct(List<string> allProductId)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                foreach (string id in allProductId)
-                {
-                    this.Dispatcher.Invoke(() =>
-                    {
+        public async Task initAllProduct(List<string> allProductId) {
+            await Task.Factory.StartNew(() => {
+                foreach (string id in allProductId) {
+                    this.Dispatcher.Invoke(() => {
                         DisplayProduct product = new DisplayProduct();
                         product.Margin = new Thickness(12);
                         product.initData(id);

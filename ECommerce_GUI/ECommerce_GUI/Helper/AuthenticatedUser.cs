@@ -11,14 +11,11 @@ namespace ECommerce_GUI.Helper
     {
         public static Account _user;
 
-        public static Account user
-        {
-            get
-            {
+        public static Account user {
+            get {
                 return _user;
             }
-            set
-            {
+            set {
                 _user = value;
             }
         }

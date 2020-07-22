@@ -28,6 +28,16 @@ namespace ECommerce_GUI.Helper
             public const string getProductImg = Base + "/Product/GetProductImg/ID={id}";
             public const string getProductReview = Base + "/Product/GetProductReview/ID={id}";
             public const string getProductSearchList = Base + "/Product/GetProductSearchList/Search={search}";
+            public const string createProductImage = Base + "/Product/CreateProductImage"; 
+        }
+
+        public static class Shop
+        {
+            public const string getShop = Base + "/Shop/GetShop/Id={id}";
+            public const string createShop = Base + "/Shop/CreateShop";
+            public const string createProduct = Base + "/Shop/CreateProduct";
+            public const string getShopProductId = Base + "/Shop/GetShopProductId/Id={id}";
+            public const string updateProductInfo = Base + "/Shop/UpdateProductInfo";
         }
 
         public static class Cart
@@ -47,6 +57,12 @@ namespace ECommerce_GUI.Helper
             public const string getOrderDetail = Base + "/Order/GetOrderDetail/OrderId={id}";
         }
 
+        public static class File
+        {
+            public const string postImage = Base + "/File/UploadClientImage";
+            public const string getImage = Base + "/File/ClientImage/Name={name}"; 
+        }
+
         public static class Transport
         {
             public const string getShippingLog = Base + "/Transport/GetShippingLog/OrderId={id}";
@@ -54,8 +70,7 @@ namespace ECommerce_GUI.Helper
 
         public class Utility
         {
-            public static string makeCheckCartURL(Library.Models.Cart value)
-            {
+            public static string makeCheckCartURL(Library.Models.Cart value) {
                 string result = Base + "/Cart/CheckCartQuantity/UserId={userId}/ProductId={productId}/Quantity={quantity}";
                 result = result.Replace("{userId}", value.UserId);
                 result = result.Replace("{productId}", value.ProductId);

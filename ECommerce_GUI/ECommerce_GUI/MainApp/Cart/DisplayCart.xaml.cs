@@ -25,15 +25,13 @@ namespace ECommerce_GUI.MainApp.Cart
     public partial class DisplayCart : UserControl
     {
         public Library.Models.Cart cart = new Library.Models.Cart();
-        public double unitPrice; 
+        public double unitPrice;
 
-        public DisplayCart()
-        {
+        public DisplayCart() {
             InitializeComponent();
         }
 
-        public async void initData(Library.Models.Cart value)
-        {
+        public async void initData(Library.Models.Cart value) {
             cart = value;
 
             Response<ProductDisplay> display = await APIHelper.Instance.Get<Response<ProductDisplay>>
@@ -44,25 +42,22 @@ namespace ECommerce_GUI.MainApp.Cart
             productPrice.Text = string.Format("{0:N0}", display.Result.Price);
             productQuantity.Text = string.Format("Quantity: {0}", value.Quantity.ToString());
 
-            unitPrice = display.Result.Price; 
+            unitPrice = display.Result.Price;
 
             CartMain.Instance.totalMoney += value.Quantity * display.Result.Price;
-            if (CartMain.Instance.totalMoneyText != null)
-            {
+            if (CartMain.Instance.totalMoneyText != null) {
                 CartMain.Instance.totalMoneyText.Text = string.Format
-                    ("Total: {0:N0} VNĐ", CartMain.Instance.totalMoney); 
+                    ("Total: {0:N0} VNĐ", CartMain.Instance.totalMoney);
             }
         }
 
-        public async Task loadUrlImg(string url)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
+        public async Task loadUrlImg(string url) {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(url, UriKind.Absolute);
+                    bitmap.UriSource = new Uri(APIHelper.Instance.makeImageUrl(url), UriKind.Absolute);
+                    bitmap.DecodePixelWidth = 1920; 
                     bitmap.EndInit();
 
                     productImg.Source = bitmap;
@@ -70,8 +65,7 @@ namespace ECommerce_GUI.MainApp.Cart
             });
         }
 
-        private void buyMore_Click(object sender, RoutedEventArgs e)
-        {
+        private void buyMore_Click(object sender, RoutedEventArgs e) {
             DetailProduct buyMore = new DetailProduct();
             buyMore.initData(cart.ProductId);
 
@@ -83,11 +77,9 @@ namespace ECommerce_GUI.MainApp.Cart
             CustomerWindow.Instance.endWatting();
         }
 
-        public async Task removeCart()
-        {
+        public async Task removeCart() {
             CartMain.Instance.totalMoney -= cart.Quantity * unitPrice;
-            if (CartMain.Instance.totalMoneyText != null)
-            {
+            if (CartMain.Instance.totalMoneyText != null) {
                 CartMain.Instance.totalMoneyText.Text = string.Format
                     ("Total: {0:N0} VNĐ", CartMain.Instance.totalMoney);
             }
@@ -100,15 +92,13 @@ namespace ECommerce_GUI.MainApp.Cart
             List<DisplayCart> currentCarts = CartMain.Instance.cartPanel.Children.OfType<DisplayCart>().
                 ToList<DisplayCart>();
 
-            if (currentCarts.Count <= 1)
-            {
+            if (currentCarts.Count <= 1) {
                 CartMain.Instance.removeView();
             }
             this.IsEnabled = false;
         }
 
-        public async void clearCart()
-        {
+        public async void clearCart() {
             Response<object> response = await APIHelper.Instance.Post<Response<object>>
                 (ApiRoutes.Cart.ClearCart, cart);
 
@@ -117,15 +107,13 @@ namespace ECommerce_GUI.MainApp.Cart
             List<DisplayCart> currentCarts = CartMain.Instance.cartPanel.Children.OfType<DisplayCart>().
                 ToList<DisplayCart>();
 
-            if (currentCarts.Count <= 1)
-            {
+            if (currentCarts.Count <= 1) {
                 CartMain.Instance.removeView();
             }
             this.IsEnabled = false;
         }
 
-        private async void deleteCart_Click(object sender, RoutedEventArgs e)
-        {
+        private async void deleteCart_Click(object sender, RoutedEventArgs e) {
             CustomerWindow.Instance.startWaitting();
 
             await removeCart();

@@ -16,11 +16,13 @@ FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\ProductM
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Product\ProductSearch.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\RechargeWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\SellerWindow.xaml;;
-FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\DetailProduct.xaml;;
-FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\Element\ChildProductList.xaml;;
-FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\UCAllProducts.xaml;;
-FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\UCDetailProduct.xaml;;
-FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\UCOrder.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\AddProductWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\AddShopWindow.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\DisplayShop.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\DisplayShopProduct.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\UpdateProductInfo.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\ViewProduct.xaml;;
+FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainApp\Seller\ViewShop.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\MainWindow.xaml;;
 FD:\Visual Studio\ECommerce\ECommerce_GUI\ECommerce_GUI\Resource\Art\ArtResource.xaml;;
 

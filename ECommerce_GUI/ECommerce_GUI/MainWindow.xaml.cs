@@ -35,16 +35,18 @@ namespace ECommerce_GUI
             this.Close();
         }
 
-        public void showLogin()
-        {
+        public void showLogin() {
             signinCtrl.Visibility = Visibility.Visible;
             signupCtrl.Visibility = Visibility.Hidden;
         }
 
-        public void showSignUp()
-        {
+        public void showSignUp() {
             signinCtrl.Visibility = Visibility.Hidden;
             signupCtrl.Visibility = Visibility.Visible;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e) {
+
         }
     }
 }

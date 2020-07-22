@@ -24,20 +24,17 @@ namespace ECommerce_GUI.MainApp.Order
     /// </summary>
     public partial class DisplayDetailOrder : UserControl
     {
-        public DisplayDetailOrder()
-        {
+        public DisplayDetailOrder() {
             InitializeComponent();
         }
 
-        public async Task loadUrlImg(string url)
-        {
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
+        public async Task loadUrlImg(string url) {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
                     BitmapImage bitmap = new BitmapImage();
                     bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(url, UriKind.Absolute);
+                    bitmap.UriSource = new Uri(APIHelper.Instance.makeImageUrl(url), UriKind.Absolute);
+                    bitmap.DecodePixelWidth = 1920; 
                     bitmap.EndInit();
 
                     productImg.Source = bitmap;
@@ -45,8 +42,7 @@ namespace ECommerce_GUI.MainApp.Order
             });
         }
 
-        public async void initData(OrderDetail value)
-        {
+        public async void initData(OrderDetail value) {
             Response<ProductDisplay> display = await APIHelper.Instance.Get<Response<ProductDisplay>>
                 (ApiRoutes.Product.getProductDisplay.Replace("{id}", value.ProductId));
 

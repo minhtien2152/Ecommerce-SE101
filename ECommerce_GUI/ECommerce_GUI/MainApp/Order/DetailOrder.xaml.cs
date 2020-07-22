@@ -24,33 +24,26 @@ namespace ECommerce_GUI.MainApp.Order
     /// </summary>
     public partial class DetailOrder : UserControl
     {
-        public DetailOrder()
-        {
+        public DetailOrder() {
             InitializeComponent();
         }
 
-        public void removeView()
-        {
+        public void removeView() {
             CustomerWindow.Instance.removeUIElement(this);
             this.IsEnabled = false;
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
+        private void back_Click(object sender, RoutedEventArgs e) {
             removeView();
         }
 
-        public async void initData(string orderId)
-        {
+        public async void initData(string orderId) {
             Response<List<OrderDetail>> orderDetailList = await APIHelper.Instance.Get<Response<List<OrderDetail>>>
                 (ApiRoutes.Order.getOrderDetail.Replace("{id}", orderId));
 
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
-                    foreach (var item in orderDetailList.Result)
-                    {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
+                    foreach (var item in orderDetailList.Result) {
                         DisplayDetailOrder newDisplay = new DisplayDetailOrder();
                         newDisplay.Margin = new Thickness(0, 10, 0, 10);
                         newDisplay.initData(item);
@@ -62,17 +55,13 @@ namespace ECommerce_GUI.MainApp.Order
             await initShippingLog(orderId);
         }
 
-        private async Task initShippingLog(string orderId)
-        {
+        private async Task initShippingLog(string orderId) {
             Response<List<ShippingLog>> logList = await APIHelper.Instance.Get<Response<List<ShippingLog>>>
                 (ApiRoutes.Transport.getShippingLog.Replace("{id}", orderId));
 
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
-                    foreach (var item in logList.Result)
-                    {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
+                    foreach (var item in logList.Result) {
                         DateTime dt = DateTime.Parse(item.date);
                         this.shippingLog.Text += $"[{dt.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture)}] " +
                             $"{item.content}\n\n";

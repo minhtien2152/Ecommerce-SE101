@@ -24,34 +24,28 @@ namespace ECommerce_GUI.Login
     /// </summary>
     public partial class SignIn : UserControl
     {
-        public SignIn()
-        {
+        public SignIn() {
             InitializeComponent();
         }
 
-        private async void signin_Click(object sender, RoutedEventArgs e)
-        {
-            if (await APIHelper.Instance.Authenticate(username.Text, password.Password.ToString()))
-            {
+        private async void signin_Click(object sender, RoutedEventArgs e) {
+            if (await APIHelper.Instance.Authenticate(username.Text, password.Password.ToString())) {
                 MainWindow.Instance.Hide();
 
                 CustomerWindow app = new MainApp.CustomerWindow();
                 app.Closed += App_Closed;
                 app.Show();
             }
-            else
-            {
+            else {
                 MessageBox.Show("sign in failed");
             }
         }
 
-        private void App_Closed(object sender, EventArgs e)
-        {
+        private void App_Closed(object sender, EventArgs e) {
             MainWindow.Instance.Close();
         }
 
-        private void noAccount_Click(object sender, RoutedEventArgs e)
-        {
+        private void noAccount_Click(object sender, RoutedEventArgs e) {
             MainWindow.Instance.showSignUp();
         }
     }

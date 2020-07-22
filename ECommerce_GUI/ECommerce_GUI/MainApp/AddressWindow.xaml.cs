@@ -21,13 +21,11 @@ namespace ECommerce_GUI.MainApp
     {
         public string deliveryAddress;
 
-        public AddressWindow()
-        {
+        public AddressWindow() {
             InitializeComponent();
         }
 
-        private void saveBtn_Click(object sender, RoutedEventArgs e)
-        {
+        private void saveBtn_Click(object sender, RoutedEventArgs e) {
             deliveryAddress = addressBox.Text;
             this.DialogResult = true;
         }

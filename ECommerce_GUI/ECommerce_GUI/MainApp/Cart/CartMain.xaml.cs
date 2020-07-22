@@ -26,22 +26,19 @@ namespace ECommerce_GUI.MainApp.Cart
     {
         public static CartMain Instance;
 
-        public TextBlock totalMoneyText = null; 
+        public TextBlock totalMoneyText = null;
         public double totalMoney = 0.0f;
 
-        public CartMain()
-        {
+        public CartMain() {
             Instance = this;
             InitializeComponent();
         }
 
-        public void removeCart(UIElement cart)
-        {
+        public void removeCart(UIElement cart) {
             cartPanel.Children.Remove(cart);
         }
 
-        private void createButton()
-        {
+        private void createButton() {
             StackPanel newPanel = new StackPanel();
             newPanel.Orientation = Orientation.Horizontal;
             newPanel.Margin = new Thickness(0, 10, 0, 10);
@@ -68,8 +65,7 @@ namespace ECommerce_GUI.MainApp.Cart
             this.cartPanel.Children.Add(newPanel);
         }
 
-        private async void CheckoutClick(object sender, RoutedEventArgs e)
-        {
+        private async void CheckoutClick(object sender, RoutedEventArgs e) {
             if (!totalMoneyText.Text.Contains("Total"))
                 return;
 
@@ -78,11 +74,10 @@ namespace ECommerce_GUI.MainApp.Cart
 
             Nullable<bool> dialogResult = getAddress.ShowDialog();
 
-            MessageBoxResult onlinePayment = Xceed.Wpf.Toolkit.MessageBox.Show("Would you like to pay online ?", 
+            MessageBoxResult onlinePayment = Xceed.Wpf.Toolkit.MessageBox.Show("Would you like to pay online ?",
                 "onlinePayment", MessageBoxButton.YesNo);
 
-            if (dialogResult == true)
-            {
+            if (dialogResult == true) {
                 Library.Models.Order newOrder = new Library.Models.Order();
                 newOrder.UserId = AuthenticatedUser.user.UserId;
                 newOrder.Address = getAddress.deliveryAddress;
@@ -90,43 +85,36 @@ namespace ECommerce_GUI.MainApp.Cart
                 newOrder.isArrived = 0;
                 newOrder.Total = totalMoney;
 
-                if (onlinePayment == MessageBoxResult.Yes)
-                {
+                if (onlinePayment == MessageBoxResult.Yes) {
                     string getBalanceUrl = ApiRoutes.Account.getCurrentBalance.Replace("{id}", AuthenticatedUser.user.UserId);
                     Response<double> currentBalance = await APIHelper.Instance.Get<Response<double>>(getBalanceUrl);
 
-                    if (currentBalance.Result < totalMoney)
-                    {
+                    if (currentBalance.Result < totalMoney) {
                         Xceed.Wpf.Toolkit.MessageBox.Show("You dont have enough money", "onlinePayment", MessageBoxButton.OKCancel);
                         return;
                     }
-                    else
-                    {
+                    else {
                         newOrder.isPaid = 1;
                         await makePaymentOnline(newOrder);
                     }
                 }
-                else
-                {
+                else {
                     newOrder.isPaid = 0;
                     await createOrderOnly(newOrder);
                 }
             }
-            else
-            {
+            else {
                 return;
             }
         }
 
-        private async Task createOrderOnly(Library.Models.Order value)
-        {
+        private async Task createOrderOnly(Library.Models.Order value) {
             Response<string> orderId = await APIHelper.Instance.Post<Response<string>>
                 (ApiRoutes.Order.createOrder, value);
 
             List<DisplayCart> listCart = this.cartPanel.Children.OfType<DisplayCart>().ToList<DisplayCart>();
 
-            foreach (var item in listCart)
-            {
+            foreach (var item in listCart) {
                 OrderDetail orderDetail = new OrderDetail();
                 orderDetail.OrderId = orderId.Result;
                 orderDetail.ProductId = item.cart.ProductId;
@@ -135,21 +123,18 @@ namespace ECommerce_GUI.MainApp.Cart
                 Response<object> orderDetailResponse = await APIHelper.Instance.Post<Response<object>>
                     (ApiRoutes.Order.createOrderDetail, orderDetail);
             }
-            foreach (var item in listCart)
-            {
+            foreach (var item in listCart) {
                 item.clearCart();
             }
         }
 
-        private async Task makePaymentOnline(Library.Models.Order value)
-        {
+        private async Task makePaymentOnline(Library.Models.Order value) {
             Response<string> orderId = await APIHelper.Instance.Post<Response<string>>
                 (ApiRoutes.Order.createOrder, value);
 
             List<DisplayCart> listCart = this.cartPanel.Children.OfType<DisplayCart>().ToList<DisplayCart>();
 
-            foreach (var item in listCart)
-            {
+            foreach (var item in listCart) {
                 OrderDetail orderDetail = new OrderDetail();
                 orderDetail.OrderId = orderId.Result;
                 orderDetail.ProductId = item.cart.ProductId;
@@ -160,27 +145,23 @@ namespace ECommerce_GUI.MainApp.Cart
                 Response<object> paymentResponse = await APIHelper.Instance.Post<Response<object>>
                     (ApiRoutes.Account.makePayment, orderDetail);
             }
-            foreach (var item in listCart)
-            {
+            foreach (var item in listCart) {
                 item.clearCart();
             }
         }
 
-        private async void DeleteCheckoutClick(object sender, RoutedEventArgs e)
-        {
+        private async void DeleteCheckoutClick(object sender, RoutedEventArgs e) {
             CustomerWindow.Instance.startWaitting();
 
             List<DisplayCart> listCart = this.cartPanel.Children.OfType<DisplayCart>().ToList<DisplayCart>();
 
-            foreach(var item in listCart)
-            {
+            foreach (var item in listCart) {
                 await item.removeCart();
             }
             CustomerWindow.Instance.endWatting();
         }
 
-        private void createTextBlock(string money)
-        {
+        private void createTextBlock(string money) {
             totalMoneyText = new TextBlock();
             totalMoneyText.Text = money;
             totalMoneyText.FontSize = 35;
@@ -190,41 +171,34 @@ namespace ECommerce_GUI.MainApp.Cart
             this.cartPanel.Children.Add(totalMoneyText);
         }
 
-        public void removeView()
-        {
+        public void removeView() {
             CustomerWindow.Instance.removeUIElement(this);
             this.IsEnabled = false;
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
-            removeView(); 
+        private void back_Click(object sender, RoutedEventArgs e) {
+            removeView();
         }
 
-        public async void initData()
-        {
+        public async void initData() {
             CustomerWindow.Instance.startWaitting();
 
             Response<List<Library.Models.Cart>> response = await APIHelper.Instance.Get<Response<List<Library.Models.Cart>>>
                 (ApiRoutes.Cart.GetCart.Replace("{userId}", AuthenticatedUser.user.UserId));
 
-            await Task.Factory.StartNew(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
-                    foreach (var item in response.Result)
-                    {
+            await Task.Factory.StartNew(() => {
+                this.Dispatcher.Invoke(() => {
+                    foreach (var item in response.Result) {
                         DisplayCart newCart = new DisplayCart();
                         newCart.Margin = new Thickness(0, 10, 0, 10);
                         newCart.initData(item);
 
                         this.cartPanel.Children.Add(newCart);
                     }
-                }); 
+                });
             });
-            
-            if (response.Result.Count > 0)
-            {
+
+            if (response.Result.Count > 0) {
                 createTextBlock("loading");
                 createButton();
             }
